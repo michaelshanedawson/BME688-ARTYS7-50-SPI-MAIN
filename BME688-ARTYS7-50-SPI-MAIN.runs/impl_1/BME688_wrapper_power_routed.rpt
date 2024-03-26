@@ -1,0 +1,223 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2023.2.2 (win64) Build 4126759 Thu Feb  8 23:53:51 MST 2024
+| Date             : Fri Mar 15 08:43:52 2024
+| Host             : DarkStar running 64-bit major release  (build 9200)
+| Command          : report_power -file BME688_wrapper_power_routed.rpt -pb BME688_wrapper_power_summary_routed.pb -rpx BME688_wrapper_power_routed.rpx
+| Design           : BME688_wrapper
+| Device           : xc7s50csga324-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 0.931        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 0.854        |
+| Device Static (W)        | 0.077        |
+| Effective TJA (C/W)      | 4.9          |
+| Max Ambient (C)          | 80.4         |
+| Junction Temperature (C) | 29.6         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.057 |       48 |       --- |             --- |
+| Slice Logic              |     0.021 |    36005 |       --- |             --- |
+|   LUT as Logic           |     0.018 |    12717 |     32600 |           39.01 |
+|   LUT as Distributed RAM |     0.001 |     1086 |      9600 |           11.31 |
+|   Register               |     0.001 |    14723 |     65200 |           22.58 |
+|   CARRY4                 |    <0.001 |      257 |      8150 |            3.15 |
+|   F7/F8 Muxes            |    <0.001 |      243 |     32600 |            0.75 |
+|   LUT as Shift Register  |    <0.001 |      492 |      9600 |            5.13 |
+|   Others                 |    <0.001 |     1446 |       --- |             --- |
+| Signals                  |     0.031 |    26714 |       --- |             --- |
+| Block RAM                |     0.062 |       34 |        75 |           45.33 |
+| MMCM                     |     0.196 |        2 |         5 |           40.00 |
+| PLL                      |     0.115 |        1 |         5 |           20.00 |
+| I/O                      |     0.260 |       62 |       210 |           29.52 |
+| PHASER                   |     0.110 |       14 |       --- |             --- |
+| Static Power             |     0.077 |          |           |                 |
+| Total                    |     0.931 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint    |       1.000 |     0.216 |       0.204 |      0.012 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.283 |       0.271 |      0.013 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135   |       1.350 |     0.118 |       0.117 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.006 |       0.005 |      0.001 |       NA    | Unspecified | NA         |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 4.9                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 4.6                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| Clock                                                                                                                                                       | Domain                                                                                                                                                                                                                      | Constraint (ns) |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| BME688_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK                                                                                                      | BME688_i/mdm_1/U0/Use_E2.BSCAN_I/DRCK                                                                                                                                                                                       |            33.3 |
+| BME688_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE                                                                                                    | BME688_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0                                                                                                                                                                               |            33.3 |
+| clk_out1_BME688_clk_wiz_0_0                                                                                                                                 | BME688_i/clk_wiz_0/inst/clk_out1_BME688_clk_wiz_0_0                                                                                                                                                                         |            10.0 |
+| clk_out2_BME688_clk_wiz_0_0                                                                                                                                 | BME688_i/clk_wiz_0/inst/clk_out2_BME688_clk_wiz_0_0                                                                                                                                                                         |            20.0 |
+| clk_pll_i                                                                                                                                                   | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i                                                                                                                                         |            12.3 |
+| clk_pll_i                                                                                                                                                   | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0_0                                                                                                                                  |            12.3 |
+| clk_pll_i_1                                                                                                                                                 | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i                                                                                                                                         |            12.3 |
+| clk_pll_i_1                                                                                                                                                 | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0_0                                                                                                                                  |            12.3 |
+| clkfbout_BME688_clk_wiz_0_0                                                                                                                                 | BME688_i/clk_wiz_0/inst/clkfbout_BME688_clk_wiz_0_0                                                                                                                                                                         |            12.3 |
+| freq_refclk                                                                                                                                                 | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/freq_refclk                                                                                                                                       |             1.5 |
+| freq_refclk_1                                                                                                                                               | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/freq_refclk                                                                                                                                       |             1.5 |
+| iserdes_clkdiv                                                                                                                                              | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/iserdes_clkdiv            |            12.3 |
+| iserdes_clkdiv_1                                                                                                                                            | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/iserdes_clkdiv            |            12.3 |
+| iserdes_clkdiv_2                                                                                                                                            | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/iserdes_clkdiv            |            12.3 |
+| iserdes_clkdiv_3                                                                                                                                            | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/iserdes_clkdiv            |            12.3 |
+| mem_refclk                                                                                                                                                  | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/mem_refclk                                                                                                                                        |             3.1 |
+| mem_refclk_1                                                                                                                                                | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/mem_refclk                                                                                                                                        |             3.1 |
+| mmcm_clkout0                                                                                                                                                | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clkout0                                                                                                                                      |             5.0 |
+| mmcm_clkout0_1                                                                                                                                              | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clkout0                                                                                                                                      |             5.0 |
+| oserdes_clk                                                                                                                                                 | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clk               |             3.1 |
+| oserdes_clk_1                                                                                                                                               | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clk               |             3.1 |
+| oserdes_clk_2                                                                                                                                               | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clk               |             3.1 |
+| oserdes_clk_3                                                                                                                                               | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clk               |             3.1 |
+| oserdes_clk_4                                                                                                                                               | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clk               |             3.1 |
+| oserdes_clk_5                                                                                                                                               | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clk               |             3.1 |
+| oserdes_clk_6                                                                                                                                               | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clk               |             3.1 |
+| oserdes_clk_7                                                                                                                                               | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clk               |             3.1 |
+| oserdes_clkdiv                                                                                                                                              | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clkdiv            |            12.3 |
+| oserdes_clkdiv_1                                                                                                                                            | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clkdiv            |            12.3 |
+| oserdes_clkdiv_2                                                                                                                                            | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clkdiv            |             6.2 |
+| oserdes_clkdiv_3                                                                                                                                            | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clkdiv            |             6.2 |
+| oserdes_clkdiv_4                                                                                                                                            | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clkdiv            |            12.3 |
+| oserdes_clkdiv_5                                                                                                                                            | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clkdiv            |            12.3 |
+| oserdes_clkdiv_6                                                                                                                                            | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clkdiv            |             6.2 |
+| oserdes_clkdiv_7                                                                                                                                            | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clkdiv            |             6.2 |
+| pll_clk3_out                                                                                                                                                | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out                                                                                                                                      |            12.3 |
+| pll_clk3_out_1                                                                                                                                              | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out                                                                                                                                      |            12.3 |
+| pll_clkfbout                                                                                                                                                | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clkfbout                                                                                                                                      |            10.0 |
+| pll_clkfbout_1                                                                                                                                              | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clkfbout                                                                                                                                      |            10.0 |
+| sync_pulse                                                                                                                                                  | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/sync_pulse                                                                                                                                        |            49.2 |
+| sync_pulse_1                                                                                                                                                | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/sync_pulse                                                                                                                                        |            49.2 |
+| sys_clk_i                                                                                                                                                   | sys_clk_i                                                                                                                                                                                                                   |            10.0 |
+| sys_clk_pin                                                                                                                                                 | sys_clk_i                                                                                                                                                                                                                   |            10.0 |
+| u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/iserdes_clk   | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_in_gen.phaser_in_0 |             3.1 |
+| u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/iserdes_clk_1 | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/phaser_in_gen.phaser_in_0 |             3.1 |
+| u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/iserdes_clk   | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_in_gen.phaser_in_0 |             3.1 |
+| u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/iserdes_clk_1 | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/phaser_in_gen.phaser_in_0 |             3.1 |
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++------------------------------------+-----------+
+| Name                               | Power (W) |
++------------------------------------+-----------+
+| BME688_wrapper                     |     0.854 |
+|   BME688_i                         |     0.853 |
+|     axi_quad_spi_0                 |     0.004 |
+|       U0                           |     0.004 |
+|     axi_quad_spi_1                 |     0.002 |
+|       U0                           |     0.002 |
+|     clk_wiz_0                      |     0.098 |
+|       inst                         |     0.098 |
+|     microblaze_0                   |     0.079 |
+|       U0                           |     0.079 |
+|     microblaze_0_axi_intc          |     0.001 |
+|       U0                           |     0.001 |
+|     microblaze_0_axi_periph        |     0.048 |
+|       m00_couplers                 |     0.006 |
+|       m01_couplers                 |     0.008 |
+|       m02_couplers                 |     0.004 |
+|       m03_couplers                 |     0.005 |
+|       m04_couplers                 |     0.005 |
+|       m05_couplers                 |     0.005 |
+|       s00_couplers                 |     0.003 |
+|       s01_couplers                 |     0.003 |
+|       s02_couplers                 |     0.002 |
+|       xbar                         |     0.007 |
+|     microblaze_0_local_memory      |     0.003 |
+|       lmb_bram                     |     0.003 |
+|     mig_7series_0                  |     0.616 |
+|       u_BME688_mig_7series_0_0_mig |     0.614 |
++------------------------------------+-----------+
+
+

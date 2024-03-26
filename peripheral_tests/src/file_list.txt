@@ -1,0 +1,7 @@
+C:\Users\cloud\OneDrive\_Arty_Spartan_7\Projects\BME688-ARTYS7-50-SPI-MAIN\peripheral_tests\src\testperiph.c
+C:\Users\cloud\OneDrive\_Arty_Spartan_7\Projects\BME688-ARTYS7-50-SPI-MAIN\peripheral_tests\src\xuartlite_selftest_example.c
+C:\Users\cloud\OneDrive\_Arty_Spartan_7\Projects\BME688-ARTYS7-50-SPI-MAIN\peripheral_tests\src\uartlite_header.h
+C:\Users\cloud\OneDrive\_Arty_Spartan_7\Projects\BME688-ARTYS7-50-SPI-MAIN\peripheral_tests\src\intc_header.h
+C:\Users\cloud\OneDrive\_Arty_Spartan_7\Projects\BME688-ARTYS7-50-SPI-MAIN\peripheral_tests\src\xspi_selftest_example.c
+C:\Users\cloud\OneDrive\_Arty_Spartan_7\Projects\BME688-ARTYS7-50-SPI-MAIN\peripheral_tests\src\xintc_tapp_example.c
+C:\Users\cloud\OneDrive\_Arty_Spartan_7\Projects\BME688-ARTYS7-50-SPI-MAIN\peripheral_tests\src\spi_header.h

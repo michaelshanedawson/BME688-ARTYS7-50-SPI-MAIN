@@ -1,0 +1,18 @@
+{
+  "name": "peripheral_tests",
+  "type": "HOST",
+  "platform": "C:\\Users\\cloud\\OneDrive\\_Arty_Spartan_7\\Projects\\BME688-ARTYS7-50-SPI-MAIN\\BME688_plat\\export\\BME688_plat\\BME688_plat.xpfm",
+  "domain": "standalone_microblaze_0",
+  "cpuInstance": "microblaze_0",
+  "cpuType": "microblaze",
+  "os": "standalone",
+  "configuration": {
+    "componentType": "HOST",
+    "hostToolchainConfigurations": []
+  },
+  "domainRealName": "standalone_microblaze_0",
+  "applicationFlow": "EMBEDDED",
+  "previousBuildStatusMap": {
+    "hw": "SUCCESS"
+  }
+}

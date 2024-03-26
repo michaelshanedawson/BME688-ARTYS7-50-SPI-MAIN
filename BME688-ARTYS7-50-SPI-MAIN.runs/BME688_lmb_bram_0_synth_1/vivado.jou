@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2.1 (64-bit)
+# SW Build 4081461 on Thu Dec 14 12:24:51 MST 2023
+# IP Build 4080415 on Thu Dec 14 21:01:57 MST 2023
+# SharedData Build 4077621 on Mon Dec 11 00:23:44 MST 2023
+# Start of session at: Wed Feb 21 13:35:28 2024
+# Process ID: 36664
+# Current directory: C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/BME688_lmb_bram_0_synth_1
+# Command line: vivado.exe -log BME688_lmb_bram_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source BME688_lmb_bram_0.tcl
+# Log file: C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/BME688_lmb_bram_0_synth_1/BME688_lmb_bram_0.vds
+# Journal file: C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/BME688_lmb_bram_0_synth_1\vivado.jou
+# Running On: DarkStar, OS: Windows, CPU Frequency: 2995 MHz, CPU Physical cores: 24, Host memory: 68447 MB
+#-----------------------------------------------------------
+source BME688_lmb_bram_0.tcl -notrace
