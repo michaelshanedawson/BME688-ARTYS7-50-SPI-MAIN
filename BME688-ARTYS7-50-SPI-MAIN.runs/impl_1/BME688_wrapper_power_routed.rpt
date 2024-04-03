@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.2.2 (win64) Build 4126759 Thu Feb  8 23:53:51 MST 2024
-| Date             : Fri Mar 15 08:43:52 2024
+| Date             : Wed Apr  3 15:45:16 2024
 | Host             : DarkStar running 64-bit major release  (build 9200)
 | Command          : report_power -file BME688_wrapper_power_routed.rpt -pb BME688_wrapper_power_summary_routed.pb -rpx BME688_wrapper_power_routed.rpx
 | Design           : BME688_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.931        |
+| Total On-Chip Power (W)  | 0.930        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.854        |
+| Dynamic (W)              | 0.853        |
 | Device Static (W)        | 0.077        |
 | Effective TJA (C/W)      | 4.9          |
 | Max Ambient (C)          | 80.4         |
@@ -53,22 +53,22 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.057 |       48 |       --- |             --- |
-| Slice Logic              |     0.021 |    36005 |       --- |             --- |
-|   LUT as Logic           |     0.018 |    12717 |     32600 |           39.01 |
+| Slice Logic              |     0.021 |    36006 |       --- |             --- |
+|   LUT as Logic           |     0.018 |    12689 |     32600 |           38.92 |
 |   LUT as Distributed RAM |     0.001 |     1086 |      9600 |           11.31 |
 |   Register               |     0.001 |    14723 |     65200 |           22.58 |
 |   CARRY4                 |    <0.001 |      257 |      8150 |            3.15 |
 |   F7/F8 Muxes            |    <0.001 |      243 |     32600 |            0.75 |
 |   LUT as Shift Register  |    <0.001 |      492 |      9600 |            5.13 |
 |   Others                 |    <0.001 |     1446 |       --- |             --- |
-| Signals                  |     0.031 |    26714 |       --- |             --- |
+| Signals                  |     0.031 |    26747 |       --- |             --- |
 | Block RAM                |     0.062 |       34 |        75 |           45.33 |
 | MMCM                     |     0.196 |        2 |         5 |           40.00 |
 | PLL                      |     0.115 |        1 |         5 |           20.00 |
 | I/O                      |     0.260 |       62 |       210 |           29.52 |
 | PHASER                   |     0.110 |       14 |       --- |             --- |
 | Static Power             |     0.077 |          |           |                 |
-| Total                    |     0.931 |          |           |                 |
+| Total                    |     0.930 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -78,7 +78,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.216 |       0.204 |      0.012 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.215 |       0.203 |      0.012 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.283 |       0.271 |      0.013 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -191,7 +191,7 @@ Table of Contents
 +------------------------------------+-----------+
 | Name                               | Power (W) |
 +------------------------------------+-----------+
-| BME688_wrapper                     |     0.854 |
+| BME688_wrapper                     |     0.853 |
 |   BME688_i                         |     0.853 |
 |     axi_quad_spi_0                 |     0.004 |
 |       U0                           |     0.004 |

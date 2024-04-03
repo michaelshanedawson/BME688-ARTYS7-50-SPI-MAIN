@@ -4,12 +4,12 @@
 #define XPAR_XGPIO_NUM_INSTANCES 1
 
 /* Definitions for peripheral GPIO */
-#define XPAR_GPIO_COMPATIBLE xlnx,axi-gpio-2.0
-#define XPAR_GPIO_BASEADDR 0x40000000
-#define XPAR_GPIO_HIGHADDR 0x4000ffff
-#define XPAR_GPIO_INTERRUPT_PRESENT 0x0
-#define XPAR_GPIO_IS_DUAL 0x0
-#define XPAR_GPIO_GPIO_WIDTH 0x1
+#define XPAR_GPIO_0_COMPATIBLE xlnx,axi-gpio-2.0
+#define XPAR_GPIO_0_BASEADDR 0x40000000
+#define XPAR_GPIO_0_HIGHADDR 0x4000ffff
+#define XPAR_GPIO_0_INTERRUPT_PRESENT 0x0
+#define XPAR_GPIO_0_IS_DUAL 0x0
+#define XPAR_GPIO_0_GPIO_WIDTH 0x1
 
 /* Canonical definitions for peripheral GPIO */
 #define XPAR_XGPIO_0_BASEADDR 0x40000000

@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2.2 (win64) Build 4126759 Thu Feb  8 23:53:51 MST 2024
-//Date        : Fri Mar 15 08:38:43 2024
+//Date        : Wed Apr  3 15:40:01 2024
 //Host        : DarkStar running 64-bit major release  (build 9200)
 //Command     : generate_target BME688.bd
 //Design      : BME688
@@ -61,9 +61,9 @@ module BME688
     sys_clk_i,
     usb_uart_rxd,
     usb_uart_txd);
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 ck_io26 " *) input [0:0]ck_io26_tri_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 ck_io26 " *) output [0:0]ck_io26_tri_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 ck_io26 " *) output [0:0]ck_io26_tri_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 ck_io26 TRI_I" *) input [0:0]ck_io26_tri_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 ck_io26 TRI_O" *) output [0:0]ck_io26_tri_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 ck_io26 TRI_T" *) output [0:0]ck_io26_tri_t;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 ddr3_sdram ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ddr3_sdram, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) output [13:0]ddr3_sdram_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 ddr3_sdram BA" *) output [2:0]ddr3_sdram_ba;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 ddr3_sdram CAS_N" *) output ddr3_sdram_cas_n;

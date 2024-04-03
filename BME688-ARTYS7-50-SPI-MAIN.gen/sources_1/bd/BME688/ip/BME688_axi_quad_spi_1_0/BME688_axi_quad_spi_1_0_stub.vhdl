@@ -1,8 +1,8 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
--- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+-- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2023.2.1 (win64) Build 4081461 Thu Dec 14 12:24:51 MST 2023
--- Date        : Sun Feb 25 14:15:12 2024
+-- Tool Version: Vivado v.2023.2.2 (win64) Build 4126759 Thu Feb  8 23:53:51 MST 2024
+-- Date        : Wed Apr  3 15:41:01 2024
 -- Host        : DarkStar running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/ip/BME688_axi_quad_spi_1_0/BME688_axi_quad_spi_1_0_stub.vhdl
@@ -58,6 +58,6 @@ attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
 attribute black_box_pad_pin of stub : architecture is "ext_spi_clk,s_axi_aclk,s_axi_aresetn,s_axi_awaddr[6:0],s_axi_awvalid,s_axi_awready,s_axi_wdata[31:0],s_axi_wstrb[3:0],s_axi_wvalid,s_axi_wready,s_axi_bresp[1:0],s_axi_bvalid,s_axi_bready,s_axi_araddr[6:0],s_axi_arvalid,s_axi_arready,s_axi_rdata[31:0],s_axi_rresp[1:0],s_axi_rvalid,s_axi_rready,io0_i,io0_o,io0_t,io1_i,io1_o,io1_t,sck_i,sck_o,sck_t,ss_i[0:0],ss_o[0:0],ss_t,ip2intc_irpt";
 attribute x_core_info : string;
-attribute x_core_info of stub : architecture is "axi_quad_spi,Vivado 2023.2.1";
+attribute x_core_info of stub : architecture is "axi_quad_spi,Vivado 2023.2.2";
 begin
 end;

@@ -817,7 +817,7 @@
         "inst_hier_path": "axi_quad_spi_1",
         "parameters": {
           "C_SCK_RATIO": {
-            "value": "4"
+            "value": "8"
           },
           "FIFO_INCLUDED": {
             "value": "0"
@@ -2824,7 +2824,7 @@
       "file": {
         "name": "..\\..\\..\\..\\BME688_app\\build\\BME688_app.elf",
         "type": "ELF",
-        "checksum": "1664412470",
+        "checksum": "2056186787",
         "IsVisible": "1",
         "ScopedToRef": "BME688",
         "ScopedToCell": [

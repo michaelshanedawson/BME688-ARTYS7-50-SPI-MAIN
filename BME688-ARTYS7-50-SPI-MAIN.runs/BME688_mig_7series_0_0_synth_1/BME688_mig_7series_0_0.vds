@@ -3,8 +3,8 @@
 # SW Build 4126759 on Thu Feb  8 23:53:51 MST 2024
 # IP Build 4126054 on Fri Feb  9 11:39:09 MST 2024
 # SharedData Build 4115275 on Tue Jan 30 00:40:57 MST 2024
-# Start of session at: Fri Mar 15 08:39:16 2024
-# Process ID: 36360
+# Start of session at: Wed Apr  3 15:40:33 2024
+# Process ID: 36460
 # Current directory: C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/BME688_mig_7series_0_0_synth_1
 # Command line: vivado.exe -log BME688_mig_7series_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source BME688_mig_7series_0_0.tcl
 # Log file: C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/BME688_mig_7series_0_0_synth_1/BME688_mig_7series_0_0.vds
@@ -19,9 +19,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
 INFO: [Device 21-403] Loading part xc7s50csga324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 33164
+INFO: [Synth 8-7075] Helper process launched with PID 3788
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:00 ; elapsed = 00:00:03 . Memory (MB): peak = 1444.855 ; gain = 439.891
+Starting RTL Elaboration : Time (s): cpu = 00:00:00 ; elapsed = 00:00:04 . Memory (MB): peak = 1444.535 ; gain = 438.512
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-10515] begin/end is required for generate-for in this mode of Verilog [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/ip/BME688_mig_7series_0_0/BME688_mig_7series_0_0/user_design/rtl/controller/mig_7series_v4_2_arb_row_col.v:253]
 INFO: [Synth 8-11241] undeclared symbol 'dbg_sel_po_incdec', assumed default net type 'wire' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/ip/BME688_mig_7series_0_0/BME688_mig_7series_0_0/user_design/rtl/BME688_mig_7series_0_0_mig.v:1264]
@@ -793,18 +793,18 @@ WARNING: [Synth 8-7129] Port dbg_phy_wrcal[99] in module mig_7series_v4_2_ddr_ph
 WARNING: [Synth 8-7129] Port dbg_phy_wrcal[98] in module mig_7series_v4_2_ddr_phy_wrcal is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1771.004 ; gain = 766.039
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1771.988 ; gain = 765.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1771.004 ; gain = 766.039
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1771.988 ; gain = 765.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1771.004 ; gain = 766.039
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1771.988 ; gain = 765.965
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.226 . Memory (MB): peak = 1771.004 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.226 . Memory (MB): peak = 1771.988 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 110 Unisim elements for replacement
 WARNING: [Netlist 29-432] The IBUFG primitive 'u_BME688_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -825,7 +825,7 @@ Finished Parsing XDC File [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME6
 INFO: [Timing 38-2] Deriving generated clocks
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1878.359 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1878.727 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 71 instances were transformed.
   IBUFG => IBUF: 1 instance 
@@ -834,17 +834,17 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance 
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 51 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.111 . Memory (MB): peak = 1878.359 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.111 . Memory (MB): peak = 1878.734 ; gain = 0.008
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 1878.359 ; gain = 873.395
+Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:17 . Memory (MB): peak = 1878.734 ; gain = 872.711
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 1878.359 ; gain = 873.395
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:17 . Memory (MB): peak = 1878.734 ; gain = 872.711
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -853,7 +853,7 @@ Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ck_n[0]. (constraint file  c
 Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ck_p[0]. (constraint file  c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/ip/BME688_mig_7series_0_0/BME688_mig_7series_0_0/user_design/constraints/BME688_mig_7series_0_0.xdc, line 28).
 Applied set_property KEEP = true for sys_rst. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 1878.359 ; gain = 873.395
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:02 ; elapsed = 00:00:17 . Memory (MB): peak = 1878.734 ; gain = 872.711
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'wl_state_r_reg' in module 'mig_7series_v4_2_ddr_phy_wrlvl'
 INFO: [Synth 8-802] inferred FSM for state register 'fine_adj_state_r_reg' in module 'mig_7series_v4_2_ddr_phy_dqs_found_cal_hr'
@@ -969,7 +969,7 @@ INFO: [Synth 8-3898] No Re-encoding of one hot register 'tempmon_state_reg' in m
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'mig_7series_v4_2_axi_mc_r_channel'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:21 . Memory (MB): peak = 1878.359 ; gain = 873.395
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:22 . Memory (MB): peak = 1878.734 ; gain = 872.711
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -1126,7 +1126,7 @@ WARNING: [Synth 8-3936] Found unconnected internal register 'oclkdelay_start_dly
 WARNING: [Synth 8-3936] Found unconnected internal register 'wrcal_start_dly_r_reg' and it is trimmed from '15' to '14' bits. [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/ip/BME688_mig_7series_0_0/BME688_mig_7series_0_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_init.v:1230]
 WARNING: [Synth 8-3332] Sequential element (FSM_onehot_cal1_state_r_reg[33]) is unused and will be removed from module mig_7series_v4_2_ddr_phy_rdlvl.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:01:11 . Memory (MB): peak = 2124.328 ; gain = 1119.363
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:01:11 . Memory (MB): peak = 2157.848 ; gain = 1151.824
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1162,13 +1162,13 @@ Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-3321] set_false_path : Empty through list for constraint at line 363 of c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/ip/BME688_mig_7series_0_0/BME688_mig_7series_0_0/user_design/constraints/BME688_mig_7series_0_0.xdc. [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/ip/BME688_mig_7series_0_0/BME688_mig_7series_0_0/user_design/constraints/BME688_mig_7series_0_0.xdc:363]
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:01:14 . Memory (MB): peak = 2124.328 ; gain = 1119.363
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:01:14 . Memory (MB): peak = 2157.848 ; gain = 1151.824
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:01:14 . Memory (MB): peak = 2124.328 ; gain = 1119.363
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:01:14 . Memory (MB): peak = 2157.848 ; gain = 1151.824
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1193,7 +1193,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:01:17 . Memory (MB): peak = 2124.328 ; gain = 1119.363
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:01:17 . Memory (MB): peak = 2157.848 ; gain = 1151.824
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1211,37 +1211,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:01:19 . Memory (MB): peak = 2124.328 ; gain = 1119.363
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:01:19 . Memory (MB): peak = 2157.848 ; gain = 1151.824
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:01:19 . Memory (MB): peak = 2124.328 ; gain = 1119.363
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:01:19 . Memory (MB): peak = 2157.848 ; gain = 1151.824
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:01:20 . Memory (MB): peak = 2124.328 ; gain = 1119.363
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:01:20 . Memory (MB): peak = 2157.848 ; gain = 1151.824
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:01:20 . Memory (MB): peak = 2124.328 ; gain = 1119.363
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:01:20 . Memory (MB): peak = 2157.848 ; gain = 1151.824
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:01:20 . Memory (MB): peak = 2124.328 ; gain = 1119.363
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:01:20 . Memory (MB): peak = 2157.848 ; gain = 1151.824
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:01:20 . Memory (MB): peak = 2124.328 ; gain = 1119.363
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:01:20 . Memory (MB): peak = 2157.848 ; gain = 1151.824
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1333,19 +1333,19 @@ Report Cell Usage:
 |42    |OBUFT                 |     2|
 +------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:01:20 . Memory (MB): peak = 2124.328 ; gain = 1119.363
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:01:20 . Memory (MB): peak = 2157.848 ; gain = 1151.824
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:01:16 . Memory (MB): peak = 2124.328 ; gain = 1012.008
-Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:01:20 . Memory (MB): peak = 2124.328 ; gain = 1119.363
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:01:17 . Memory (MB): peak = 2157.848 ; gain = 1045.078
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:01:20 . Memory (MB): peak = 2157.848 ; gain = 1151.824
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.159 . Memory (MB): peak = 2124.328 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.160 . Memory (MB): peak = 2157.848 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 325 Unisim elements for replacement
 WARNING: [Netlist 29-432] The IBUFG primitive 'u_BME688_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 2 inverter(s) to 16 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2124.328 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2157.848 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 135 instances were transformed.
   IBUFG => IBUF: 1 instance 
@@ -1359,9 +1359,9 @@ Synth Design complete | Checksum: 6a217e7f
 INFO: [Common 17-83] Releasing license: Synthesis
 246 Infos, 303 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:01:24 . Memory (MB): peak = 2124.328 ; gain = 1496.750
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:01:24 . Memory (MB): peak = 2157.848 ; gain = 1531.961
 INFO: [Coretcl 2-1174] Renamed 88 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2124.328 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2157.848 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/BME688_mig_7series_0_0_synth_1/BME688_mig_7series_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file BME688_mig_7series_0_0_utilization_synth.rpt -pb BME688_mig_7series_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Mar 15 08:40:48 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Apr  3 15:42:06 2024...

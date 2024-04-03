@@ -28,36 +28,36 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 32180
+INFO: [Synth 8-7075] Helper process launched with PID 27056
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 1483.531 ; gain = 439.141
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 1485.309 ; gain = 441.355
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'BME688_wrapper' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/hdl/BME688_wrapper.v:13]
 INFO: [Synth 8-6157] synthesizing module 'BME688' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:13]
-INFO: [Synth 8-6157] synthesizing module 'BME688_axi_quad_spi_0_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_axi_quad_spi_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_axi_quad_spi_0_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_axi_quad_spi_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_axi_quad_spi_0_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_axi_quad_spi_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_axi_quad_spi_0_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_axi_quad_spi_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'cfgclk' of module 'BME688_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:444]
 WARNING: [Synth 8-7071] port 'cfgmclk' of module 'BME688_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:444]
 WARNING: [Synth 8-7071] port 'eos' of module 'BME688_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:444]
 WARNING: [Synth 8-7071] port 'preq' of module 'BME688_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:444]
 WARNING: [Synth 8-7071] port 'ip2intc_irpt' of module 'BME688_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:444]
 WARNING: [Synth 8-7023] instance 'axi_quad_spi_0' of module 'BME688_axi_quad_spi_0_0' has 40 connections declared, but only 35 given [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:444]
-INFO: [Synth 8-6157] synthesizing module 'BME688_axi_quad_spi_1_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_axi_quad_spi_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_axi_quad_spi_1_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_axi_quad_spi_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_axi_quad_spi_1_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_axi_quad_spi_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_axi_quad_spi_1_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_axi_quad_spi_1_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'ip2intc_irpt' of module 'BME688_axi_quad_spi_1_0' is unconnected for instance 'axi_quad_spi_1' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:480]
 WARNING: [Synth 8-7023] instance 'axi_quad_spi_1' of module 'BME688_axi_quad_spi_1_0' has 33 connections declared, but only 32 given [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:480]
-INFO: [Synth 8-6157] synthesizing module 'BME688_axi_uartlite_0_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_axi_uartlite_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_axi_uartlite_0_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_axi_uartlite_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_axi_uartlite_0_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_axi_uartlite_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_axi_uartlite_0_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_axi_uartlite_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'interrupt' of module 'BME688_axi_uartlite_0_0' is unconnected for instance 'axi_uartlite_0' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:513]
 WARNING: [Synth 8-7023] instance 'axi_uartlite_0' of module 'BME688_axi_uartlite_0_0' has 22 connections declared, but only 21 given [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:513]
-INFO: [Synth 8-6157] synthesizing module 'BME688_clk_wiz_0_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_clk_wiz_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_clk_wiz_0_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_clk_wiz_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'BME688_axi_gpio_0_1' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_axi_gpio_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_axi_gpio_0_1' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_axi_gpio_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'BME688_mdm_1_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_mdm_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_mdm_1_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_mdm_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'BME688_microblaze_0_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_microblaze_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_microblaze_0_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_microblaze_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_clk_wiz_0_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_clk_wiz_0_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_axi_gpio_0_1' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_axi_gpio_0_1' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_mdm_1_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_mdm_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_mdm_1_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_mdm_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_microblaze_0_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_microblaze_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_microblaze_0_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_microblaze_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'M_AXI_IC_AWID' of module 'BME688_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:577]
 WARNING: [Synth 8-7071] port 'M_AXI_IC_AWADDR' of module 'BME688_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:577]
 WARNING: [Synth 8-7071] port 'M_AXI_IC_AWLEN' of module 'BME688_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:577]
@@ -77,85 +77,85 @@ WARNING: [Synth 8-7071] port 'M_AXI_IC_ARID' of module 'BME688_microblaze_0_0' i
 WARNING: [Synth 8-7071] port 'M_AXI_DC_AWID' of module 'BME688_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:577]
 WARNING: [Synth 8-7071] port 'M_AXI_DC_ARID' of module 'BME688_microblaze_0_0' is unconnected for instance 'microblaze_0' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:577]
 WARNING: [Synth 8-7023] instance 'microblaze_0' of module 'BME688_microblaze_0_0' has 126 connections declared, but only 108 given [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:577]
-INFO: [Synth 8-6157] synthesizing module 'BME688_microblaze_0_axi_intc_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_microblaze_0_axi_intc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_microblaze_0_axi_intc_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_microblaze_0_axi_intc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_microblaze_0_axi_intc_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_microblaze_0_axi_intc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_microblaze_0_axi_intc_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_microblaze_0_axi_intc_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'BME688_microblaze_0_axi_periph_0' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:1030]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1LI8Q55' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:2812]
-INFO: [Synth 8-6157] synthesizing module 'BME688_auto_ds_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_auto_ds_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_auto_ds_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_auto_ds_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'BME688_auto_pc_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_auto_pc_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_auto_ds_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_auto_ds_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_auto_pc_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_auto_pc_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_auto_pc_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'BME688_auto_pc_0' is unconnected for instance 'auto_pc' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:3163]
 WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'BME688_auto_pc_0' is unconnected for instance 'auto_pc' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:3163]
 WARNING: [Synth 8-7023] instance 'auto_pc' of module 'BME688_auto_pc_0' has 56 connections declared, but only 54 given [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:3163]
 INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1LI8Q55' (0#1) [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:2812]
 INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_QYKH54' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:3220]
-INFO: [Synth 8-6157] synthesizing module 'BME688_auto_cc_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_auto_cc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_auto_cc_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_auto_cc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_auto_cc_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_auto_cc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_auto_cc_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_auto_cc_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'BME688_auto_cc_0' is unconnected for instance 'auto_cc' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:3543]
 WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'BME688_auto_cc_0' is unconnected for instance 'auto_cc' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:3543]
 WARNING: [Synth 8-7023] instance 'auto_cc' of module 'BME688_auto_cc_0' has 82 connections declared, but only 80 given [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:3543]
 INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_QYKH54' (0#1) [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:3220]
 INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_K80G1M' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:3626]
-INFO: [Synth 8-6157] synthesizing module 'BME688_auto_ds_1' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_auto_ds_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_auto_ds_1' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_auto_ds_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'BME688_auto_pc_1' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_auto_pc_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_auto_pc_1' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_auto_ds_1' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_auto_ds_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_auto_ds_1' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_auto_ds_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_auto_pc_1' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_auto_pc_1' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_auto_pc_1_stub.v:6]
 WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'BME688_auto_pc_1' is unconnected for instance 'auto_pc' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:3977]
 WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'BME688_auto_pc_1' is unconnected for instance 'auto_pc' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:3977]
 WARNING: [Synth 8-7023] instance 'auto_pc' of module 'BME688_auto_pc_1' has 56 connections declared, but only 54 given [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:3977]
 INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_K80G1M' (0#1) [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:3626]
 INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1RYTGVF' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:4034]
-INFO: [Synth 8-6157] synthesizing module 'BME688_auto_ds_2' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_auto_ds_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_auto_ds_2' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_auto_ds_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'BME688_auto_pc_2' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_auto_pc_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_auto_pc_2' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_auto_pc_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_auto_ds_2' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_auto_ds_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_auto_ds_2' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_auto_ds_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_auto_pc_2' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_auto_pc_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_auto_pc_2' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_auto_pc_2_stub.v:6]
 WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'BME688_auto_pc_2' is unconnected for instance 'auto_pc' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:4385]
 WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'BME688_auto_pc_2' is unconnected for instance 'auto_pc' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:4385]
 WARNING: [Synth 8-7023] instance 'auto_pc' of module 'BME688_auto_pc_2' has 56 connections declared, but only 54 given [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:4385]
 INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1RYTGVF' (0#1) [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:4034]
 INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_7M6XGE' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:4442]
-INFO: [Synth 8-6157] synthesizing module 'BME688_auto_ds_3' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_auto_ds_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_auto_ds_3' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_auto_ds_3_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'BME688_auto_pc_3' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_auto_pc_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_auto_pc_3' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_auto_pc_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_auto_ds_3' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_auto_ds_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_auto_ds_3' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_auto_ds_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_auto_pc_3' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_auto_pc_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_auto_pc_3' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_auto_pc_3_stub.v:6]
 WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'BME688_auto_pc_3' is unconnected for instance 'auto_pc' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:4793]
 WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'BME688_auto_pc_3' is unconnected for instance 'auto_pc' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:4793]
 WARNING: [Synth 8-7023] instance 'auto_pc' of module 'BME688_auto_pc_3' has 56 connections declared, but only 54 given [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:4793]
 INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_7M6XGE' (0#1) [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:4442]
 INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_1E91KY7' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:4850]
-INFO: [Synth 8-6157] synthesizing module 'BME688_auto_ds_4' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_auto_ds_4_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_auto_ds_4' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_auto_ds_4_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'BME688_auto_pc_4' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_auto_pc_4_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_auto_pc_4' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_auto_pc_4_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_auto_ds_4' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_auto_ds_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_auto_ds_4' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_auto_ds_4_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_auto_pc_4' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_auto_pc_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_auto_pc_4' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_auto_pc_4_stub.v:6]
 WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'BME688_auto_pc_4' is unconnected for instance 'auto_pc' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:5201]
 WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'BME688_auto_pc_4' is unconnected for instance 'auto_pc' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:5201]
 WARNING: [Synth 8-7023] instance 'auto_pc' of module 'BME688_auto_pc_4' has 56 connections declared, but only 54 given [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:5201]
 INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_1E91KY7' (0#1) [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:4850]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1X167YG' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:5492]
-INFO: [Synth 8-6157] synthesizing module 'BME688_auto_us_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_auto_us_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_auto_us_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_auto_us_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_auto_us_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_auto_us_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_auto_us_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_auto_us_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'BME688_auto_us_0' is unconnected for instance 'auto_us' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:5771]
 WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'BME688_auto_us_0' is unconnected for instance 'auto_us' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:5771]
 WARNING: [Synth 8-7023] instance 'auto_us' of module 'BME688_auto_us_0' has 72 connections declared, but only 70 given [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:5771]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1X167YG' (0#1) [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:5492]
 INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_O1GLSP' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:5844]
-INFO: [Synth 8-6157] synthesizing module 'BME688_auto_pc_5' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_auto_pc_5_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_auto_pc_5' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_auto_pc_5_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'BME688_auto_us_1' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_auto_us_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_auto_us_1' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_auto_us_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_auto_pc_5' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_auto_pc_5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_auto_pc_5' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_auto_pc_5_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_auto_us_1' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_auto_us_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_auto_us_1' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_auto_us_1_stub.v:6]
 WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'BME688_auto_us_1' is unconnected for instance 'auto_us' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:6159]
 WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'BME688_auto_us_1' is unconnected for instance 'auto_us' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:6159]
 WARNING: [Synth 8-7023] instance 'auto_us' of module 'BME688_auto_us_1' has 72 connections declared, but only 70 given [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:6159]
 INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_O1GLSP' (0#1) [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:5844]
 INFO: [Synth 8-6157] synthesizing module 's02_couplers_imp_ZCSPEZ' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:6232]
-INFO: [Synth 8-6157] synthesizing module 'BME688_auto_us_2' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_auto_us_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_auto_us_2' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_auto_us_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_auto_us_2' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_auto_us_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_auto_us_2' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_auto_us_2_stub.v:6]
 WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'BME688_auto_us_2' is unconnected for instance 'auto_us' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:6367]
 WARNING: [Synth 8-7023] instance 'auto_us' of module 'BME688_auto_us_2' has 34 connections declared, but only 33 given [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:6367]
 INFO: [Synth 8-6155] done synthesizing module 's02_couplers_imp_ZCSPEZ' (0#1) [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:6232]
-INFO: [Synth 8-6157] synthesizing module 'BME688_xbar_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_xbar_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_xbar_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_xbar_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_xbar_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_xbar_0_stub.v:6]
 WARNING: [Synth 8-689] width (2) of port connection 's_axi_awready' does not match port width (3) of module 'BME688_xbar_0' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:2794]
 WARNING: [Synth 8-689] width (4) of port connection 's_axi_bresp' does not match port width (6) of module 'BME688_xbar_0' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:2798]
 WARNING: [Synth 8-689] width (2) of port connection 's_axi_bvalid' does not match port width (3) of module 'BME688_xbar_0' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:2799]
@@ -165,20 +165,20 @@ WARNING: [Synth 8-7071] port 's_axi_rid' of module 'BME688_xbar_0' is unconnecte
 WARNING: [Synth 8-7023] instance 'xbar' of module 'BME688_xbar_0' has 78 connections declared, but only 76 given [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:2733]
 INFO: [Synth 8-6155] done synthesizing module 'BME688_microblaze_0_axi_periph_0' (0#1) [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:1030]
 INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_VM1M4B' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:5258]
-INFO: [Synth 8-6157] synthesizing module 'BME688_dlmb_bram_if_cntlr_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_dlmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_dlmb_bram_if_cntlr_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_dlmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'BME688_dlmb_v10_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_dlmb_v10_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_dlmb_v10_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_dlmb_v10_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_dlmb_bram_if_cntlr_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_dlmb_bram_if_cntlr_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_dlmb_v10_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_dlmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_dlmb_v10_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_dlmb_v10_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'BME688_dlmb_v10_0' is unconnected for instance 'dlmb_v10' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:5404]
 WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'BME688_dlmb_v10_0' has 25 connections declared, but only 24 given [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:5404]
-INFO: [Synth 8-6157] synthesizing module 'BME688_ilmb_bram_if_cntlr_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_ilmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_ilmb_bram_if_cntlr_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_ilmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'BME688_ilmb_v10_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_ilmb_v10_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_ilmb_v10_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_ilmb_v10_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_ilmb_bram_if_cntlr_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_ilmb_bram_if_cntlr_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_ilmb_v10_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_ilmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_ilmb_v10_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_ilmb_v10_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'BME688_ilmb_v10_0' is unconnected for instance 'ilmb_v10' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:5450]
 WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'BME688_ilmb_v10_0' has 25 connections declared, but only 24 given [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:5450]
-INFO: [Synth 8-6157] synthesizing module 'BME688_lmb_bram_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_lmb_bram_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_lmb_bram_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_lmb_bram_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_lmb_bram_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_lmb_bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_lmb_bram_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_lmb_bram_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'rsta_busy' of module 'BME688_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:5475]
 WARNING: [Synth 8-7071] port 'rstb_busy' of module 'BME688_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:5475]
 WARNING: [Synth 8-7023] instance 'lmb_bram' of module 'BME688_lmb_bram_0' has 16 connections declared, but only 14 given [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:5475]
@@ -187,8 +187,8 @@ INFO: [Synth 8-6157] synthesizing module 'BME688_microblaze_0_xlconcat_0' [c:/Us
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_5_xlconcat' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/ipshared/147b/hdl/xlconcat_v2_1_vl_rfs.v:59]
 INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_5_xlconcat' (0#1) [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/ipshared/147b/hdl/xlconcat_v2_1_vl_rfs.v:59]
 INFO: [Synth 8-6155] done synthesizing module 'BME688_microblaze_0_xlconcat_0' (0#1) [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/ip/BME688_microblaze_0_xlconcat_0/synth/BME688_microblaze_0_xlconcat_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'BME688_mig_7series_0_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_mig_7series_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_mig_7series_0_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_mig_7series_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_mig_7series_0_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_mig_7series_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_mig_7series_0_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_mig_7series_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'ui_addn_clk_1' of module 'BME688_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:948]
 WARNING: [Synth 8-7071] port 'ui_addn_clk_2' of module 'BME688_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:948]
 WARNING: [Synth 8-7071] port 'ui_addn_clk_3' of module 'BME688_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:948]
@@ -199,13 +199,13 @@ WARNING: [Synth 8-7071] port 'app_zq_ack' of module 'BME688_mig_7series_0_0' is 
 WARNING: [Synth 8-7071] port 'init_calib_complete' of module 'BME688_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:948]
 WARNING: [Synth 8-7071] port 'device_temp' of module 'BME688_mig_7series_0_0' is unconnected for instance 'mig_7series_0' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:948]
 WARNING: [Synth 8-7023] instance 'mig_7series_0' of module 'BME688_mig_7series_0_0' has 70 connections declared, but only 61 given [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:948]
-INFO: [Synth 8-6157] synthesizing module 'BME688_rst_clk_wiz_0_100M_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_rst_clk_wiz_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_rst_clk_wiz_0_100M_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_rst_clk_wiz_0_100M_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_rst_clk_wiz_0_100M_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_rst_clk_wiz_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_rst_clk_wiz_0_100M_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_rst_clk_wiz_0_100M_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'BME688_rst_clk_wiz_0_100M_0' is unconnected for instance 'rst_clk_wiz_0_100M' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:1010]
 WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'BME688_rst_clk_wiz_0_100M_0' is unconnected for instance 'rst_clk_wiz_0_100M' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:1010]
 WARNING: [Synth 8-7023] instance 'rst_clk_wiz_0_100M' of module 'BME688_rst_clk_wiz_0_100M_0' has 10 connections declared, but only 8 given [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:1010]
-INFO: [Synth 8-6157] synthesizing module 'BME688_rst_mig_7series_0_81M_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_rst_mig_7series_0_81M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'BME688_rst_mig_7series_0_81M_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-11616-DarkStar/realtime/BME688_rst_mig_7series_0_81M_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'BME688_rst_mig_7series_0_81M_0' [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_rst_mig_7series_0_81M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'BME688_rst_mig_7series_0_81M_0' (0#1) [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/.Xil/Vivado-33204-DarkStar/realtime/BME688_rst_mig_7series_0_81M_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'BME688_rst_mig_7series_0_81M_0' is unconnected for instance 'rst_mig_7series_0_81M' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:1019]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'BME688_rst_mig_7series_0_81M_0' is unconnected for instance 'rst_mig_7series_0_81M' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:1019]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'BME688_rst_mig_7series_0_81M_0' is unconnected for instance 'rst_mig_7series_0_81M' [c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/synth/BME688.v:1019]
@@ -321,18 +321,18 @@ WARNING: [Synth 8-7129] Port In100[0] in module xlconcat_v2_1_5_xlconcat is eith
 WARNING: [Synth 8-7129] Port In101[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1614.703 ; gain = 570.312
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1617.027 ; gain = 573.074
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1614.703 ; gain = 570.312
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1617.027 ; gain = 573.074
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1614.703 ; gain = 570.312
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1617.027 ; gain = 573.074
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 1616.883 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.059 . Memory (MB): peak = 1617.027 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -411,26 +411,26 @@ Parsing XDC File [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7
 Finished Parsing XDC File [C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1692.406 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1685.746 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 10 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 10 instances
 
 The system cannot find the path specified.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1692.406 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1685.746 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'BME688_i/axi_quad_spi_1' at clock pin 'ext_spi_clk' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'BME688_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 1692.965 ; gain = 648.574
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1685.766 ; gain = 641.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 1692.965 ; gain = 648.574
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1685.766 ; gain = 641.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -570,10 +570,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for BME688_i/microblaze_0_axi_periph/
 Applied set_property KEEP_HIERARCHY = SOFT for BME688_i/microblaze_0_axi_periph. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for BME688_i/gpio. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 1692.965 ; gain = 648.574
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1685.766 ; gain = 641.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 1692.965 ; gain = 648.574
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1685.766 ; gain = 641.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -596,25 +596,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 1692.965 ; gain = 648.574
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 1685.766 ; gain = 641.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 1692.965 ; gain = 648.574
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:14 . Memory (MB): peak = 1685.766 ; gain = 641.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 1692.965 ; gain = 648.574
+Finished Timing Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:14 . Memory (MB): peak = 1685.766 ; gain = 641.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 1692.965 ; gain = 648.574
+Finished Technology Mapping : Time (s): cpu = 00:00:04 ; elapsed = 00:00:14 . Memory (MB): peak = 1685.766 ; gain = 641.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -632,37 +632,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 1692.965 ; gain = 648.574
+Finished IO Insertion : Time (s): cpu = 00:00:04 ; elapsed = 00:00:16 . Memory (MB): peak = 1685.766 ; gain = 641.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 1692.965 ; gain = 648.574
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:04 ; elapsed = 00:00:16 . Memory (MB): peak = 1685.766 ; gain = 641.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 1692.965 ; gain = 648.574
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:04 ; elapsed = 00:00:16 . Memory (MB): peak = 1685.766 ; gain = 641.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 1692.965 ; gain = 648.574
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:04 ; elapsed = 00:00:16 . Memory (MB): peak = 1685.766 ; gain = 641.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 1692.965 ; gain = 648.574
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:16 . Memory (MB): peak = 1685.766 ; gain = 641.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 1692.965 ; gain = 648.574
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:04 ; elapsed = 00:00:16 . Memory (MB): peak = 1685.766 ; gain = 641.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -736,18 +736,18 @@ Report Cell Usage:
 |35    |OBUF                         |     1|
 +------+-----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 1692.965 ; gain = 648.574
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:04 ; elapsed = 00:00:16 . Memory (MB): peak = 1685.766 ; gain = 641.812
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 1692.965 ; gain = 570.312
-Synthesis Optimization Complete : Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 1692.965 ; gain = 648.574
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 1685.766 ; gain = 573.074
+Synthesis Optimization Complete : Time (s): cpu = 00:00:04 ; elapsed = 00:00:16 . Memory (MB): peak = 1685.766 ; gain = 641.812
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 1692.965 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 1685.766 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1692.965 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1685.766 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 10 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 10 instances
@@ -757,8 +757,8 @@ Synth Design complete | Checksum: f371db8f
 INFO: [Common 17-83] Releasing license: Synthesis
 128 Infos, 190 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:19 . Memory (MB): peak = 1692.965 ; gain = 1040.242
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1692.965 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:19 . Memory (MB): peak = 1685.766 ; gain = 1032.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1685.766 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.runs/synth_1/BME688_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file BME688_wrapper_utilization_synth.rpt -pb BME688_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Mar 15 08:41:18 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Apr  3 15:42:36 2024...

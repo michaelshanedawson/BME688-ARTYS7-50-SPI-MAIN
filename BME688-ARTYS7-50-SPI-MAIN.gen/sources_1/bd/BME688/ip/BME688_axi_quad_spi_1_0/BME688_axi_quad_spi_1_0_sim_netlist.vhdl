@@ -1,8 +1,8 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
--- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+-- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2023.2.1 (win64) Build 4081461 Thu Dec 14 12:24:51 MST 2023
--- Date        : Sun Feb 25 14:15:12 2024
+-- Tool Version: Vivado v.2023.2.2 (win64) Build 4126759 Thu Feb  8 23:53:51 MST 2024
+-- Date        : Wed Apr  3 15:41:01 2024
 -- Host        : DarkStar running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/ip/BME688_axi_quad_spi_1_0/BME688_axi_quad_spi_1_0_sim_netlist.vhdl
@@ -628,6 +628,7 @@ entity BME688_axi_quad_spi_1_0_cross_clk_sync_fifo_0 is
     spicr_0_loop_to_spi_clk : out STD_LOGIC;
     SPICR_2_MST_N_SLV_to_spi_clk : out STD_LOGIC;
     spicr_3_cpol_to_spi_clk : out STD_LOGIC;
+    spicr_4_cpha_to_spi_clk : out STD_LOGIC;
     spicr_9_lsb_to_spi_clk : out STD_LOGIC;
     Tx_FIFO_Empty_SPISR_to_axi_clk : out STD_LOGIC;
     tx_Reg_Soft_Reset_op : out STD_LOGIC;
@@ -639,14 +640,14 @@ entity BME688_axi_quad_spi_1_0_cross_clk_sync_fifo_0 is
     \LOGIC_GENERATION_FDR.SYNC_SPIXFER_DONE_SYNC_SPI_2_AXI_3_2\ : out STD_LOGIC;
     \LOGIC_GENERATION_FDR.SPICR_2_MST_N_SLV_AX2S_2_0\ : out STD_LOGIC;
     \LOGIC_GENERATION_FDR.SPICR_7_SS_AX2S_2_0\ : out STD_LOGIC;
-    \LOGIC_GENERATION_FDR.TX_FIFO_EMPTY_SYNC_AXI_2_SPI_3_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
+    D : out STD_LOGIC_VECTOR ( 0 to 0 );
     \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]\ : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    \OTHER_RATIO_GENERATE.serial_dout_int_reg\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     tx_fifo_empty : out STD_LOGIC;
     R : out STD_LOGIC;
     \LOGIC_GENERATION_FDR.SPICR_3_CPOL_AX2S_2_0\ : out STD_LOGIC;
     D_1 : out STD_LOGIC;
     \LOGIC_GENERATION_FDR.TR_DATA_SYNC_AX2SP_GEN[7].TR_DATA_SYNC_AX2SP_2_0\ : out STD_LOGIC;
-    D : out STD_LOGIC_VECTOR ( 0 to 0 );
     \LOGIC_GENERATION_FDR.receive_Data_cdc_from_spi_d2_reg[0]_0\ : out STD_LOGIC_VECTOR ( 7 downto 0 );
     Rst_to_spi : in STD_LOGIC;
     ext_spi_clk : in STD_LOGIC;
@@ -684,7 +685,6 @@ entity BME688_axi_quad_spi_1_0_cross_clk_sync_fifo_0 is
     xfer_done_fifo_0 : in STD_LOGIC;
     transfer_start_d1 : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    Serial_Din : in STD_LOGIC;
     \OTHER_RATIO_GENERATE.Shift_Reg_reg[7]\ : in STD_LOGIC;
     \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]\ : in STD_LOGIC_VECTOR ( 6 downto 0 );
     serial_dout_int : in STD_LOGIC;
@@ -701,6 +701,7 @@ architecture STRUCTURE of BME688_axi_quad_spi_1_0_cross_clk_sync_fifo_0 is
   signal \^d_0\ : STD_LOGIC;
   signal \^logic_generation_fdr.drr_overrun_int_cdc_from_spi_int_2_reg_0\ : STD_LOGIC;
   signal \LOGIC_GENERATION_FDR.spiXfer_done_cdc_from_spi_int_2_reg_n_0\ : STD_LOGIC;
+  signal \^other_ratio_generate.serial_dout_int_reg\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal SPICR_0_LOOP_cdc_from_axi_d1 : STD_LOGIC;
   signal SPICR_1_SPE_cdc_from_axi_d1 : STD_LOGIC;
   signal SPICR_2_MST_N_SLV_cdc_from_axi_d1 : STD_LOGIC;
@@ -730,7 +731,7 @@ architecture STRUCTURE of BME688_axi_quad_spi_1_0_cross_clk_sync_fifo_0 is
   signal \^spicr_0_loop_to_spi_clk\ : STD_LOGIC;
   signal spicr_1_spe_to_spi_clk : STD_LOGIC;
   signal \^spicr_3_cpol_to_spi_clk\ : STD_LOGIC;
-  signal spicr_4_cpha_to_spi_clk : STD_LOGIC;
+  signal \^spicr_4_cpha_to_spi_clk\ : STD_LOGIC;
   signal spicr_7_ss_to_spi_clk : STD_LOGIC;
   signal spicr_8_tr_inhibit_to_spi_clk : STD_LOGIC;
   signal \^spicr_9_lsb_to_spi_clk\ : STD_LOGIC;
@@ -746,8 +747,8 @@ architecture STRUCTURE of BME688_axi_quad_spi_1_0_cross_clk_sync_fifo_0 is
   signal transmit_Data_cdc_from_axi_d1_6 : STD_LOGIC;
   signal transmit_Data_cdc_from_axi_d1_7 : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_sequential_LOCAL_TX_EMPTY_RX_FULL_FIFO_0_GEN.spi_cntrl_ps[1]_i_1\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of \GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg[2]_i_1\ : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of \FSM_sequential_LOCAL_TX_EMPTY_RX_FULL_FIFO_0_GEN.spi_cntrl_ps[1]_i_1\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg[2]_i_1\ : label is "soft_lutpair37";
   attribute XILINX_LEGACY_PRIM : string;
   attribute XILINX_LEGACY_PRIM of \LOGIC_GENERATION_FDR.DRR_OVERRUN_SYNC_SPI_cdc_to_AXI_1\ : label is "FDR";
   attribute XILINX_TRANSFORM_PINMAP : string;
@@ -910,18 +911,20 @@ architecture STRUCTURE of BME688_axi_quad_spi_1_0_cross_clk_sync_fifo_0 is
   attribute XILINX_LEGACY_PRIM of \LOGIC_GENERATION_FDR.TX_FIFO_EMPTY_SYNC_AXI_2_SPI_3\ : label is "FDR";
   attribute XILINX_TRANSFORM_PINMAP of \LOGIC_GENERATION_FDR.TX_FIFO_EMPTY_SYNC_AXI_2_SPI_3\ : label is "VCC:CE";
   attribute box_type of \LOGIC_GENERATION_FDR.TX_FIFO_EMPTY_SYNC_AXI_2_SPI_3\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \OTHER_RATIO_GENERATE.Serial_Dout_i_2\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \OTHER_RATIO_GENERATE.Shift_Reg[7]_i_1\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of SPIXfer_done_delay_i_1 : label is "soft_lutpair36";
-  attribute SOFT_HLUTNM of SR_5_Tx_Empty_d1_i_1 : label is "soft_lutpair37";
+  attribute SOFT_HLUTNM of \OTHER_RATIO_GENERATE.Serial_Dout_i_3\ : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of \OTHER_RATIO_GENERATE.Shift_Reg[7]_i_1\ : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of SPIXfer_done_delay_i_1 : label is "soft_lutpair37";
+  attribute SOFT_HLUTNM of SR_5_Tx_Empty_d1_i_1 : label is "soft_lutpair38";
 begin
   D_0 <= \^d_0\;
   \LOGIC_GENERATION_FDR.drr_Overrun_int_cdc_from_spi_int_2_reg_0\ <= \^logic_generation_fdr.drr_overrun_int_cdc_from_spi_int_2_reg_0\;
+  \OTHER_RATIO_GENERATE.serial_dout_int_reg\(0) <= \^other_ratio_generate.serial_dout_int_reg\(0);
   SPICR_2_MST_N_SLV_to_spi_clk <= \^spicr_2_mst_n_slv_to_spi_clk\;
   Tx_FIFO_Empty_cdc_from_axi_d2 <= \^tx_fifo_empty_cdc_from_axi_d2\;
   Tx_FIFO_Empty_cdc_from_axi_d3 <= \^tx_fifo_empty_cdc_from_axi_d3\;
   spicr_0_loop_to_spi_clk <= \^spicr_0_loop_to_spi_clk\;
   spicr_3_cpol_to_spi_clk <= \^spicr_3_cpol_to_spi_clk\;
+  spicr_4_cpha_to_spi_clk <= \^spicr_4_cpha_to_spi_clk\;
   spicr_9_lsb_to_spi_clk <= \^spicr_9_lsb_to_spi_clk\;
 \FSM_sequential_LOCAL_TX_EMPTY_RX_FULL_FIFO_0_GEN.spi_cntrl_ps[1]_i_1\: unisim.vcomponents.LUT5
     generic map(
@@ -933,7 +936,7 @@ begin
       I2 => register_Data_slvsel_int,
       I3 => Q(0),
       I4 => Q(1),
-      O => \LOGIC_GENERATION_FDR.TX_FIFO_EMPTY_SYNC_AXI_2_SPI_3_0\(0)
+      O => D(0)
     );
 \GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg[2]_i_1\: unisim.vcomponents.LUT5
     generic map(
@@ -1111,7 +1114,7 @@ begin
       C => ext_spi_clk,
       CE => '1',
       D => SPICR_4_CPHA_cdc_from_axi_d1,
-      Q => spicr_4_cpha_to_spi_clk,
+      Q => \^spicr_4_cpha_to_spi_clk\,
       R => Rst_to_spi
     );
 \LOGIC_GENERATION_FDR.SPICR_7_SS_AX2S_1\: unisim.vcomponents.FDRE
@@ -1687,7 +1690,7 @@ begin
       Q => \LOGIC_GENERATION_FDR.spiXfer_done_cdc_from_spi_int_2_reg_n_0\,
       R => Rst_to_spi
     );
-\OTHER_RATIO_GENERATE.Serial_Dout_i_2\: unisim.vcomponents.LUT3
+\OTHER_RATIO_GENERATE.Serial_Dout_i_3\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"B8"
     )
@@ -1786,22 +1789,14 @@ begin
       INIT => X"B8BBB888"
     )
         port map (
-      I0 => Serial_Din,
+      I0 => \^other_ratio_generate.serial_dout_int_reg\(0),
       I1 => \OTHER_RATIO_GENERATE.Shift_Reg_reg[7]\,
       I2 => data_from_txfifo(0),
       I3 => \^spicr_9_lsb_to_spi_clk\,
       I4 => data_from_txfifo(7),
       O => \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]\(0)
     );
-\RATIO_OF_4_GENERATE.SCK_O_EQ_4_NO_STARTUP_USED.SCK_O_EQ_4_FDRE_INST_i_1\: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => \^spicr_2_mst_n_slv_to_spi_clk\,
-      O => R
-    );
-\RISING_EDGE_CLK_RATIO_4_GEN.Serial_Din_i_1\: unisim.vcomponents.LUT5
+\OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110[7]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"B8FFB800"
     )
@@ -1811,7 +1806,15 @@ begin
       I2 => io1_i_sync,
       I3 => \^spicr_2_mst_n_slv_to_spi_clk\,
       I4 => io0_i_sync,
-      O => D(0)
+      O => \^other_ratio_generate.serial_dout_int_reg\(0)
+    );
+\RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST_i_1\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => \^spicr_2_mst_n_slv_to_spi_clk\,
+      O => R
     );
 \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[0]_i_3\: unisim.vcomponents.LUT2
     generic map(
@@ -1819,7 +1822,7 @@ begin
     )
         port map (
       I0 => \^spicr_3_cpol_to_spi_clk\,
-      I1 => spicr_4_cpha_to_spi_clk,
+      I1 => \^spicr_4_cpha_to_spi_clk\,
       O => \LOGIC_GENERATION_FDR.SPICR_3_CPOL_AX2S_2_0\
     );
 SPIXfer_done_delay_i_1: unisim.vcomponents.LUT2
@@ -2829,70 +2832,70 @@ architecture STRUCTURE of BME688_axi_quad_spi_1_0_soft_reset is
   attribute box_type : string;
   attribute box_type of FF_WRACK : label is "PRIMITIVE";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of FF_WRACK_i_1 : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of FF_WRACK_i_1 : label is "soft_lutpair39";
   attribute IS_CE_INVERTED of \RESET_FLOPS[0].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[0].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[0].RST_FLOPS\ : label is "PRIMITIVE";
   attribute IS_CE_INVERTED of \RESET_FLOPS[10].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[10].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[10].RST_FLOPS\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \RESET_FLOPS[10].RST_FLOPS_i_1\ : label is "soft_lutpair43";
+  attribute SOFT_HLUTNM of \RESET_FLOPS[10].RST_FLOPS_i_1\ : label is "soft_lutpair44";
   attribute IS_CE_INVERTED of \RESET_FLOPS[11].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[11].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[11].RST_FLOPS\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \RESET_FLOPS[11].RST_FLOPS_i_1\ : label is "soft_lutpair44";
+  attribute SOFT_HLUTNM of \RESET_FLOPS[11].RST_FLOPS_i_1\ : label is "soft_lutpair45";
   attribute IS_CE_INVERTED of \RESET_FLOPS[12].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[12].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[12].RST_FLOPS\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \RESET_FLOPS[12].RST_FLOPS_i_1\ : label is "soft_lutpair44";
+  attribute SOFT_HLUTNM of \RESET_FLOPS[12].RST_FLOPS_i_1\ : label is "soft_lutpair45";
   attribute IS_CE_INVERTED of \RESET_FLOPS[13].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[13].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[13].RST_FLOPS\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \RESET_FLOPS[13].RST_FLOPS_i_1\ : label is "soft_lutpair45";
+  attribute SOFT_HLUTNM of \RESET_FLOPS[13].RST_FLOPS_i_1\ : label is "soft_lutpair46";
   attribute IS_CE_INVERTED of \RESET_FLOPS[14].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[14].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[14].RST_FLOPS\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \RESET_FLOPS[14].RST_FLOPS_i_1\ : label is "soft_lutpair45";
+  attribute SOFT_HLUTNM of \RESET_FLOPS[14].RST_FLOPS_i_1\ : label is "soft_lutpair46";
   attribute IS_CE_INVERTED of \RESET_FLOPS[15].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[15].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[15].RST_FLOPS\ : label is "PRIMITIVE";
   attribute IS_CE_INVERTED of \RESET_FLOPS[1].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[1].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[1].RST_FLOPS\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \RESET_FLOPS[1].RST_FLOPS_i_1\ : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of \RESET_FLOPS[1].RST_FLOPS_i_1\ : label is "soft_lutpair40";
   attribute IS_CE_INVERTED of \RESET_FLOPS[2].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[2].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[2].RST_FLOPS\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \RESET_FLOPS[2].RST_FLOPS_i_1\ : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of \RESET_FLOPS[2].RST_FLOPS_i_1\ : label is "soft_lutpair40";
   attribute IS_CE_INVERTED of \RESET_FLOPS[3].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[3].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[3].RST_FLOPS\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \RESET_FLOPS[3].RST_FLOPS_i_1\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \RESET_FLOPS[3].RST_FLOPS_i_1\ : label is "soft_lutpair41";
   attribute IS_CE_INVERTED of \RESET_FLOPS[4].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[4].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[4].RST_FLOPS\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \RESET_FLOPS[4].RST_FLOPS_i_1\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \RESET_FLOPS[4].RST_FLOPS_i_1\ : label is "soft_lutpair41";
   attribute IS_CE_INVERTED of \RESET_FLOPS[5].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[5].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[5].RST_FLOPS\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \RESET_FLOPS[5].RST_FLOPS_i_1\ : label is "soft_lutpair41";
+  attribute SOFT_HLUTNM of \RESET_FLOPS[5].RST_FLOPS_i_1\ : label is "soft_lutpair42";
   attribute IS_CE_INVERTED of \RESET_FLOPS[6].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[6].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[6].RST_FLOPS\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \RESET_FLOPS[6].RST_FLOPS_i_1\ : label is "soft_lutpair41";
+  attribute SOFT_HLUTNM of \RESET_FLOPS[6].RST_FLOPS_i_1\ : label is "soft_lutpair42";
   attribute IS_CE_INVERTED of \RESET_FLOPS[7].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[7].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[7].RST_FLOPS\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \RESET_FLOPS[7].RST_FLOPS_i_1\ : label is "soft_lutpair42";
+  attribute SOFT_HLUTNM of \RESET_FLOPS[7].RST_FLOPS_i_1\ : label is "soft_lutpair43";
   attribute IS_CE_INVERTED of \RESET_FLOPS[8].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[8].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[8].RST_FLOPS\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \RESET_FLOPS[8].RST_FLOPS_i_1\ : label is "soft_lutpair42";
+  attribute SOFT_HLUTNM of \RESET_FLOPS[8].RST_FLOPS_i_1\ : label is "soft_lutpair43";
   attribute IS_CE_INVERTED of \RESET_FLOPS[9].RST_FLOPS\ : label is "1'b0";
   attribute IS_S_INVERTED of \RESET_FLOPS[9].RST_FLOPS\ : label is "1'b0";
   attribute box_type of \RESET_FLOPS[9].RST_FLOPS\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \RESET_FLOPS[9].RST_FLOPS_i_1\ : label is "soft_lutpair43";
-  attribute SOFT_HLUTNM of RESET_SYNC_AX2S_1_i_1 : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \RESET_FLOPS[9].RST_FLOPS_i_1\ : label is "soft_lutpair44";
+  attribute SOFT_HLUTNM of RESET_SYNC_AX2S_1_i_1 : label is "soft_lutpair39";
 begin
   \RESET_FLOPS[15].RST_FLOPS_0\ <= \^reset_flops[15].rst_flops_0\;
 FF_WRACK: unisim.vcomponents.FDRE
@@ -4757,7 +4760,6 @@ entity BME688_axi_quad_spi_1_0_qspi_mode_0_module is
     io1_t : out STD_LOGIC;
     io0_t : out STD_LOGIC;
     ss_t : out STD_LOGIC;
-    Serial_Din : out STD_LOGIC;
     transfer_start_d1 : out STD_LOGIC;
     \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_ABSENT_GEN.SPIXfer_done_int_reg_0\ : out STD_LOGIC;
     spiXfer_done_int : out STD_LOGIC;
@@ -4774,21 +4776,22 @@ entity BME688_axi_quad_spi_1_0_qspi_mode_0_module is
     ext_spi_clk : in STD_LOGIC;
     R : in STD_LOGIC;
     Rst_to_spi : in STD_LOGIC;
-    D : in STD_LOGIC_VECTOR ( 0 to 0 );
     tx_fifo_empty : in STD_LOGIC;
     transfer_start_reg_0 : in STD_LOGIC;
     \SS_O_reg[0]_0\ : in STD_LOGIC;
-    SPICR_2_MST_N_SLV_to_spi_clk : in STD_LOGIC;
-    \OTHER_RATIO_GENERATE.sck_o_int_reg_0\ : in STD_LOGIC;
-    \OTHER_RATIO_GENERATE.Serial_Dout_reg_0\ : in STD_LOGIC;
     Tx_FIFO_Empty_cdc_from_axi_d2 : in STD_LOGIC;
     Tx_FIFO_Empty_cdc_from_axi_d3 : in STD_LOGIC;
-    \FSM_sequential_LOCAL_TX_EMPTY_RX_FULL_FIFO_0_GEN.spi_cntrl_ps_reg[1]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    SPICR_2_MST_N_SLV_to_spi_clk : in STD_LOGIC;
+    \OTHER_RATIO_GENERATE.Serial_Dout_reg_0\ : in STD_LOGIC;
+    \OTHER_RATIO_GENERATE.sck_o_int_reg_0\ : in STD_LOGIC;
+    D : in STD_LOGIC_VECTOR ( 0 to 0 );
     \LOGIC_GENERATION_FDR.drr_Overrun_int_cdc_from_spi_int_2_reg\ : in STD_LOGIC;
-    spicr_9_lsb_to_spi_clk : in STD_LOGIC;
+    spicr_4_cpha_to_spi_clk : in STD_LOGIC;
     spicr_3_cpol_to_spi_clk : in STD_LOGIC;
+    spicr_9_lsb_to_spi_clk : in STD_LOGIC;
     spicr_0_loop_to_spi_clk : in STD_LOGIC;
     prmry_in : in STD_LOGIC;
+    \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[7]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]_0\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -4813,16 +4816,17 @@ architecture STRUCTURE of BME688_axi_quad_spi_1_0_qspi_mode_0_module is
   signal \OTHER_RATIO_GENERATE.Count_trigger_d1_i_1_n_0\ : STD_LOGIC;
   signal \OTHER_RATIO_GENERATE.Count_trigger_i_1_n_0\ : STD_LOGIC;
   signal \OTHER_RATIO_GENERATE.Ratio_Count[0]_i_1_n_0\ : STD_LOGIC;
+  signal \OTHER_RATIO_GENERATE.Ratio_Count[1]_i_1_n_0\ : STD_LOGIC;
   signal \OTHER_RATIO_GENERATE.Serial_Dout_i_1_n_0\ : STD_LOGIC;
-  signal \OTHER_RATIO_GENERATE.Serial_Dout_i_3_n_0\ : STD_LOGIC;
+  signal \OTHER_RATIO_GENERATE.Serial_Dout_i_4_n_0\ : STD_LOGIC;
+  signal \OTHER_RATIO_GENERATE.Serial_Dout_i_5_n_0\ : STD_LOGIC;
   signal \OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0\ : STD_LOGIC;
   signal \OTHER_RATIO_GENERATE.sck_o_int_i_1_n_0\ : STD_LOGIC;
   signal \OTHER_RATIO_GENERATE.sck_o_int_i_2_n_0\ : STD_LOGIC;
   signal \OTHER_RATIO_GENERATE.sck_o_int_i_3_n_0\ : STD_LOGIC;
-  signal \OTHER_RATIO_GENERATE.sck_o_int_i_4_n_0\ : STD_LOGIC;
   signal \OTHER_RATIO_GENERATE.serial_dout_int_i_1_n_0\ : STD_LOGIC;
   signal \^q\ : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal \RATIO_OF_4_GENERATE.SCK_O_EQ_4_NO_STARTUP_USED.SCK_O_EQ_4_FDRE_INST_i_3_n_0\ : STD_LOGIC;
+  signal \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST_i_2_n_0\ : STD_LOGIC;
   signal \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_ABSENT_GEN.SPIXfer_done_int_i_1_n_0\ : STD_LOGIC;
   signal \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_ABSENT_GEN.SPIXfer_done_int_i_2_n_0\ : STD_LOGIC;
   signal \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_ABSENT_GEN.SPIXfer_done_int_i_3_n_0\ : STD_LOGIC;
@@ -4836,14 +4840,14 @@ architecture STRUCTURE of BME688_axi_quad_spi_1_0_qspi_mode_0_module is
   signal \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[5]_i_1_n_0\ : STD_LOGIC;
   signal \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[6]_i_1_n_0\ : STD_LOGIC;
   signal \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int[7]_i_1_n_0\ : STD_LOGIC;
-  signal Ratio_Count : STD_LOGIC;
+  signal Ratio_Count : STD_LOGIC_VECTOR ( 0 to 1 );
   signal Rx_FIFO_Full_reg : STD_LOGIC;
-  signal SCK_O_1 : STD_LOGIC;
   signal SPIXfer_done_int_d1 : STD_LOGIC;
   signal \^spixfer_done_int_d1_reg_0\ : STD_LOGIC;
   signal SPIXfer_done_int_pulse : STD_LOGIC;
   signal SPIXfer_done_int_pulse_d1 : STD_LOGIC;
   signal SR_5_Tx_Empty_d1 : STD_LOGIC;
+  signal Sync_Set : STD_LOGIC;
   signal drr_Overrun_int : STD_LOGIC;
   signal \^io1_o\ : STD_LOGIC;
   signal p_0_in : STD_LOGIC;
@@ -4863,26 +4867,28 @@ architecture STRUCTURE of BME688_axi_quad_spi_1_0_qspi_mode_0_module is
   attribute FSM_ENCODED_STATES of \FSM_sequential_LOCAL_TX_EMPTY_RX_FULL_FIFO_0_GEN.spi_cntrl_ps_reg[0]\ : label is "transfer_okay:01,temp_transfer_okay:10,idle:00";
   attribute FSM_ENCODED_STATES of \FSM_sequential_LOCAL_TX_EMPTY_RX_FULL_FIFO_0_GEN.spi_cntrl_ps_reg[1]\ : label is "transfer_okay:01,temp_transfer_okay:10,idle:00";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \LOCAL_TX_EMPTY_RX_FULL_FIFO_0_GEN.DRR_Overrun_reg_int_i_1\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of \LOGIC_GENERATION_FDR.drr_Overrun_int_cdc_from_spi_int_2_i_1\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of \OTHER_RATIO_GENERATE.Count[0]_i_1\ : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of \OTHER_RATIO_GENERATE.Count[1]_i_1\ : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of \OTHER_RATIO_GENERATE.Count[2]_i_1\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \OTHER_RATIO_GENERATE.Count[3]_i_1\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \OTHER_RATIO_GENERATE.Count[4]_i_3\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \LOCAL_TX_EMPTY_RX_FULL_FIFO_0_GEN.DRR_Overrun_reg_int_i_1\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \LOGIC_GENERATION_FDR.drr_Overrun_int_cdc_from_spi_int_2_i_1\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \OTHER_RATIO_GENERATE.Count[0]_i_1\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \OTHER_RATIO_GENERATE.Count[1]_i_1\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \OTHER_RATIO_GENERATE.Count[2]_i_1\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \OTHER_RATIO_GENERATE.Count[3]_i_1\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \OTHER_RATIO_GENERATE.Count[4]_i_3\ : label is "soft_lutpair30";
   attribute SOFT_HLUTNM of \OTHER_RATIO_GENERATE.Count_trigger_d1_i_1\ : label is "soft_lutpair32";
-  attribute SOFT_HLUTNM of \OTHER_RATIO_GENERATE.Count_trigger_i_1\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \OTHER_RATIO_GENERATE.Ratio_Count[0]_i_1\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \OTHER_RATIO_GENERATE.Serial_Dout_i_3\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \OTHER_RATIO_GENERATE.sck_o_int_i_2\ : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \OTHER_RATIO_GENERATE.sck_o_int_i_4\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \OTHER_RATIO_GENERATE.Count_trigger_i_1\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \OTHER_RATIO_GENERATE.Ratio_Count[0]_i_1\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \OTHER_RATIO_GENERATE.Ratio_Count[1]_i_1\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \OTHER_RATIO_GENERATE.Serial_Dout_i_5\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \OTHER_RATIO_GENERATE.sck_o_int_i_2\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \OTHER_RATIO_GENERATE.sck_o_int_i_4\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \OTHER_RATIO_GENERATE.serial_dout_int_i_1\ : label is "soft_lutpair34";
   attribute IOB : string;
-  attribute IOB of \RATIO_OF_4_GENERATE.SCK_O_EQ_4_NO_STARTUP_USED.SCK_O_EQ_4_FDRE_INST\ : label is "TRUE";
+  attribute IOB of \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST\ : label is "TRUE";
   attribute box_type : string;
-  attribute box_type of \RATIO_OF_4_GENERATE.SCK_O_EQ_4_NO_STARTUP_USED.SCK_O_EQ_4_FDRE_INST\ : label is "PRIMITIVE";
-  attribute SOFT_HLUTNM of \RATIO_OF_4_GENERATE.SCK_O_EQ_4_NO_STARTUP_USED.SCK_O_EQ_4_FDRE_INST_i_3\ : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_ABSENT_GEN.SPIXfer_done_int_i_2\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_ABSENT_GEN.SPIXfer_done_int_i_3\ : label is "soft_lutpair30";
+  attribute box_type of \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST\ : label is "PRIMITIVE";
+  attribute SOFT_HLUTNM of \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_ABSENT_GEN.SPIXfer_done_int_i_2\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_ABSENT_GEN.SPIXfer_done_int_i_3\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of SPIXfer_done_int_pulse_d1_i_1 : label is "soft_lutpair29";
   attribute KEEP : string;
   attribute KEEP of SPI_TRISTATE_CONTROL_II : label is "yes";
   attribute XILINX_LEGACY_PRIM : string;
@@ -4942,7 +4948,7 @@ begin
         port map (
       C => ext_spi_clk,
       CE => '1',
-      D => \FSM_sequential_LOCAL_TX_EMPTY_RX_FULL_FIFO_0_GEN.spi_cntrl_ps_reg[1]_0\(0),
+      D => D(0),
       Q => \^q\(1),
       R => Rst_to_spi
     );
@@ -5065,24 +5071,24 @@ begin
     );
 \OTHER_RATIO_GENERATE.Count[4]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFFFFF7"
+      INIT => X"FEFFFFFF"
     )
         port map (
-      I0 => SPICR_2_MST_N_SLV_to_spi_clk,
-      I1 => transfer_start_reg_n_0,
-      I2 => Rst_to_spi,
-      I3 => \^rx_data_gen_other_sck_ratios.fifo_absent_gen.spixfer_done_int_reg_0\,
-      I4 => \^xfer_done_fifo_0\,
+      I0 => \^rx_data_gen_other_sck_ratios.fifo_absent_gen.spixfer_done_int_reg_0\,
+      I1 => Rst_to_spi,
+      I2 => \^xfer_done_fifo_0\,
+      I3 => transfer_start_reg_n_0,
+      I4 => SPICR_2_MST_N_SLV_to_spi_clk,
       O => \OTHER_RATIO_GENERATE.Count[4]_i_1_n_0\
     );
 \OTHER_RATIO_GENERATE.Count[4]_i_2\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"06"
+      INIT => X"14"
     )
         port map (
-      I0 => Count_trigger,
+      I0 => p_0_in,
       I1 => Count_trigger_d1,
-      I2 => p_0_in,
+      I2 => Count_trigger,
       O => \OTHER_RATIO_GENERATE.Count[4]_i_2_n_0\
     );
 \OTHER_RATIO_GENERATE.Count[4]_i_3\: unisim.vcomponents.LUT4
@@ -5169,15 +5175,16 @@ begin
       Q => Count_trigger_d1,
       R => '0'
     );
-\OTHER_RATIO_GENERATE.Count_trigger_i_1\: unisim.vcomponents.LUT4
+\OTHER_RATIO_GENERATE.Count_trigger_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0090"
+      INIT => X"0000A900"
     )
         port map (
       I0 => Count_trigger,
-      I1 => Ratio_Count,
-      I2 => transfer_start_reg_n_0,
-      I3 => Rst_to_spi,
+      I1 => Ratio_Count(1),
+      I2 => Ratio_Count(0),
+      I3 => transfer_start_reg_n_0,
+      I4 => Rst_to_spi,
       O => \OTHER_RATIO_GENERATE.Count_trigger_i_1_n_0\
     );
 \OTHER_RATIO_GENERATE.Count_trigger_reg\: unisim.vcomponents.FDRE
@@ -5188,47 +5195,56 @@ begin
       Q => Count_trigger,
       R => '0'
     );
-\OTHER_RATIO_GENERATE.Ratio_Count[0]_i_1\: unisim.vcomponents.LUT3
+\OTHER_RATIO_GENERATE.Ratio_Count[0]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"F9FF"
+    )
+        port map (
+      I0 => Ratio_Count(1),
+      I1 => Ratio_Count(0),
+      I2 => Rst_to_spi,
+      I3 => transfer_start_reg_n_0,
+      O => \OTHER_RATIO_GENERATE.Ratio_Count[0]_i_1_n_0\
+    );
+\OTHER_RATIO_GENERATE.Ratio_Count[1]_i_1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"DF"
     )
         port map (
-      I0 => transfer_start_reg_n_0,
+      I0 => Ratio_Count(1),
       I1 => Rst_to_spi,
-      I2 => Ratio_Count,
-      O => \OTHER_RATIO_GENERATE.Ratio_Count[0]_i_1_n_0\
+      I2 => transfer_start_reg_n_0,
+      O => \OTHER_RATIO_GENERATE.Ratio_Count[1]_i_1_n_0\
     );
 \OTHER_RATIO_GENERATE.Ratio_Count_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => ext_spi_clk,
       CE => '1',
       D => \OTHER_RATIO_GENERATE.Ratio_Count[0]_i_1_n_0\,
-      Q => Ratio_Count,
+      Q => Ratio_Count(0),
+      R => '0'
+    );
+\OTHER_RATIO_GENERATE.Ratio_Count_reg[1]\: unisim.vcomponents.FDRE
+     port map (
+      C => ext_spi_clk,
+      CE => '1',
+      D => \OTHER_RATIO_GENERATE.Ratio_Count[1]_i_1_n_0\,
+      Q => Ratio_Count(1),
       R => '0'
     );
 \OTHER_RATIO_GENERATE.Serial_Dout_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"AFCCA0CC"
+      INIT => X"B8FFB800"
     )
         port map (
       I0 => p_3_in,
-      I1 => \OTHER_RATIO_GENERATE.Serial_Dout_reg_0\,
-      I2 => \OTHER_RATIO_GENERATE.Serial_Dout_i_3_n_0\,
-      I3 => \^spixfer_done_int_d1_reg_0\,
+      I1 => \^spixfer_done_int_d1_reg_0\,
+      I2 => \OTHER_RATIO_GENERATE.Serial_Dout_reg_0\,
+      I3 => \OTHER_RATIO_GENERATE.Serial_Dout_i_4_n_0\,
       I4 => \^io1_o\,
       O => \OTHER_RATIO_GENERATE.Serial_Dout_i_1_n_0\
     );
-\OTHER_RATIO_GENERATE.Serial_Dout_i_3\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"74"
-    )
-        port map (
-      I0 => \OTHER_RATIO_GENERATE.Count_reg_n_0_[0]\,
-      I1 => SPICR_2_MST_N_SLV_to_spi_clk,
-      I2 => transfer_start_reg_n_0,
-      O => \OTHER_RATIO_GENERATE.Serial_Dout_i_3_n_0\
-    );
-\OTHER_RATIO_GENERATE.Serial_Dout_i_4\: unisim.vcomponents.LUT6
+\OTHER_RATIO_GENERATE.Serial_Dout_i_2\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"101F1010101F101F"
     )
@@ -5241,6 +5257,30 @@ begin
       I5 => SR_5_Tx_Empty_d1,
       O => \^spixfer_done_int_d1_reg_0\
     );
+\OTHER_RATIO_GENERATE.Serial_Dout_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"F7FFF500F7FFF5FF"
+    )
+        port map (
+      I0 => \OTHER_RATIO_GENERATE.Count_reg_n_0_[0]\,
+      I1 => \^transfer_start_d1\,
+      I2 => SPIXfer_done_int_d1,
+      I3 => SPICR_2_MST_N_SLV_to_spi_clk,
+      I4 => transfer_start_reg_n_0,
+      I5 => \OTHER_RATIO_GENERATE.Serial_Dout_i_5_n_0\,
+      O => \OTHER_RATIO_GENERATE.Serial_Dout_i_4_n_0\
+    );
+\OTHER_RATIO_GENERATE.Serial_Dout_i_5\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"1455"
+    )
+        port map (
+      I0 => \^rx_data_gen_other_sck_ratios.fifo_absent_gen.spixfer_done_int_reg_0\,
+      I1 => Tx_FIFO_Empty_cdc_from_axi_d2,
+      I2 => Tx_FIFO_Empty_cdc_from_axi_d3,
+      I3 => SR_5_Tx_Empty_d1,
+      O => \OTHER_RATIO_GENERATE.Serial_Dout_i_5_n_0\
+    );
 \OTHER_RATIO_GENERATE.Serial_Dout_reg\: unisim.vcomponents.FDSE
      port map (
       C => ext_spi_clk,
@@ -5251,14 +5291,14 @@ begin
     );
 \OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"7D555555"
+      INIT => X"0880FFFF"
     )
         port map (
-      I0 => \^spixfer_done_int_d1_reg_0\,
-      I1 => Count_trigger_d1,
+      I0 => \OTHER_RATIO_GENERATE.Count_reg_n_0_[0]\,
+      I1 => SPICR_2_MST_N_SLV_to_spi_clk,
       I2 => Count_trigger,
-      I3 => SPICR_2_MST_N_SLV_to_spi_clk,
-      I4 => \OTHER_RATIO_GENERATE.Count_reg_n_0_[0]\,
+      I3 => Count_trigger_d1,
+      I4 => \^spixfer_done_int_d1_reg_0\,
       O => \OTHER_RATIO_GENERATE.Shift_Reg[0]_i_1_n_0\
     );
 \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]\: unisim.vcomponents.FDRE
@@ -5419,7 +5459,7 @@ begin
         port map (
       C => ext_spi_clk,
       CE => rx_shft_reg_mode_00110,
-      D => D(0),
+      D => \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[7]_0\(0),
       Q => rx_shft_reg_mode_0011(7),
       R => Rst_to_spi
     );
@@ -5517,7 +5557,7 @@ begin
         port map (
       C => ext_spi_clk,
       CE => rx_shft_reg_mode_01100,
-      D => D(0),
+      D => \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[7]_0\(0),
       Q => rx_shft_reg_mode_0110(7),
       R => Rst_to_spi
     );
@@ -5559,27 +5599,29 @@ begin
       I1 => \^transfer_start_d1\,
       O => \OTHER_RATIO_GENERATE.sck_o_int_i_2_n_0\
     );
-\OTHER_RATIO_GENERATE.sck_o_int_i_3\: unisim.vcomponents.LUT6
+\OTHER_RATIO_GENERATE.sck_o_int_i_3\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"DFFF55FFEFCCAA00"
-    )
-        port map (
-      I0 => \OTHER_RATIO_GENERATE.sck_o_int_i_4_n_0\,
-      I1 => \^rx_data_gen_other_sck_ratios.fifo_absent_gen.spixfer_done_int_reg_0\,
-      I2 => \^transfer_start_d1\,
-      I3 => transfer_start_reg_n_0,
-      I4 => \OTHER_RATIO_GENERATE.sck_o_int_reg_0\,
-      I5 => sck_o_int,
-      O => \OTHER_RATIO_GENERATE.sck_o_int_i_3_n_0\
-    );
-\OTHER_RATIO_GENERATE.sck_o_int_i_4\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"6"
+      INIT => X"FF9FFF60"
     )
         port map (
       I0 => Count_trigger_d1,
       I1 => Count_trigger,
-      O => \OTHER_RATIO_GENERATE.sck_o_int_i_4_n_0\
+      I2 => transfer_start_reg_n_0,
+      I3 => Sync_Set,
+      I4 => sck_o_int,
+      O => \OTHER_RATIO_GENERATE.sck_o_int_i_3_n_0\
+    );
+\OTHER_RATIO_GENERATE.sck_o_int_i_4\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"66660060"
+    )
+        port map (
+      I0 => spicr_4_cpha_to_spi_clk,
+      I1 => spicr_3_cpol_to_spi_clk,
+      I2 => transfer_start_reg_n_0,
+      I3 => \^transfer_start_d1\,
+      I4 => \^rx_data_gen_other_sck_ratios.fifo_absent_gen.spixfer_done_int_reg_0\,
+      O => Sync_Set
     );
 \OTHER_RATIO_GENERATE.sck_o_int_reg\: unisim.vcomponents.FDRE
      port map (
@@ -5607,7 +5649,7 @@ begin
       Q => serial_dout_int,
       R => '0'
     );
-\RATIO_OF_4_GENERATE.SCK_O_EQ_4_NO_STARTUP_USED.SCK_O_EQ_4_FDRE_INST\: unisim.vcomponents.FDRE
+\RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0',
       IS_C_INVERTED => '0',
@@ -5617,51 +5659,34 @@ begin
         port map (
       C => ext_spi_clk,
       CE => '1',
-      D => SCK_O_1,
+      D => \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST_i_2_n_0\,
       Q => sck_o,
       R => R
     );
-\RATIO_OF_4_GENERATE.SCK_O_EQ_4_NO_STARTUP_USED.SCK_O_EQ_4_FDRE_INST_i_2\: unisim.vcomponents.LUT6
+\RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FF00BF0000008000"
+      INIT => X"AABAAAAAAA8AAAAA"
     )
         port map (
-      I0 => sck_o_int,
-      I1 => \RATIO_OF_4_GENERATE.SCK_O_EQ_4_NO_STARTUP_USED.SCK_O_EQ_4_FDRE_INST_i_3_n_0\,
-      I2 => transfer_start_reg_n_0,
-      I3 => SPICR_2_MST_N_SLV_to_spi_clk,
-      I4 => p_0_in,
-      I5 => spicr_3_cpol_to_spi_clk,
-      O => SCK_O_1
-    );
-\RATIO_OF_4_GENERATE.SCK_O_EQ_4_NO_STARTUP_USED.SCK_O_EQ_4_FDRE_INST_i_3\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"2"
-    )
-        port map (
-      I0 => \^transfer_start_d1\,
+      I0 => spicr_3_cpol_to_spi_clk,
       I1 => \^xfer_done_fifo_0\,
-      O => \RATIO_OF_4_GENERATE.SCK_O_EQ_4_NO_STARTUP_USED.SCK_O_EQ_4_FDRE_INST_i_3_n_0\
-    );
-\RISING_EDGE_CLK_RATIO_4_GEN.Serial_Din_reg\: unisim.vcomponents.FDRE
-     port map (
-      C => ext_spi_clk,
-      CE => '1',
-      D => D(0),
-      Q => Serial_Din,
-      R => Rst_to_spi
+      I2 => \^transfer_start_d1\,
+      I3 => p_0_in,
+      I4 => transfer_start_reg_n_0,
+      I5 => sck_o_int,
+      O => \RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST_i_2_n_0\
     );
 \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_ABSENT_GEN.SPIXfer_done_int_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000000000000D00"
+      INIT => X"0010001000000010"
     )
         port map (
-      I0 => transfer_start_reg_n_0,
-      I1 => \^transfer_start_d1\,
-      I2 => \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_ABSENT_GEN.SPIXfer_done_int_i_2_n_0\,
-      I3 => \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_ABSENT_GEN.SPIXfer_done_int_i_3_n_0\,
-      I4 => \^rx_data_gen_other_sck_ratios.fifo_absent_gen.spixfer_done_int_reg_0\,
-      I5 => Rst_to_spi,
+      I0 => Rst_to_spi,
+      I1 => \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_ABSENT_GEN.SPIXfer_done_int_i_2_n_0\,
+      I2 => \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_ABSENT_GEN.SPIXfer_done_int_i_3_n_0\,
+      I3 => \^rx_data_gen_other_sck_ratios.fifo_absent_gen.spixfer_done_int_reg_0\,
+      I4 => transfer_start_reg_n_0,
+      I5 => \^transfer_start_d1\,
       O => \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_ABSENT_GEN.SPIXfer_done_int_i_1_n_0\
     );
 \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_ABSENT_GEN.SPIXfer_done_int_i_2\: unisim.vcomponents.LUT4
@@ -6106,23 +6131,22 @@ architecture STRUCTURE of BME688_axi_quad_spi_1_0_qspi_core_interface is
   signal IP2Bus_Error_1 : STD_LOGIC;
   signal IP2Bus_RdAck_1 : STD_LOGIC;
   signal IP2Bus_WrAck_1 : STD_LOGIC;
-  signal \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_13\ : STD_LOGIC;
+  signal \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_12\ : STD_LOGIC;
+  signal \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_24\ : STD_LOGIC;
   signal \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_25\ : STD_LOGIC;
   signal \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_26\ : STD_LOGIC;
   signal \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_27\ : STD_LOGIC;
   signal \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_28\ : STD_LOGIC;
   signal \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_29\ : STD_LOGIC;
   signal \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_30\ : STD_LOGIC;
-  signal \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_31\ : STD_LOGIC;
-  signal \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_7\ : STD_LOGIC;
-  signal \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_11\ : STD_LOGIC;
+  signal \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_6\ : STD_LOGIC;
   signal \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_12\ : STD_LOGIC;
-  signal \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_14\ : STD_LOGIC;
+  signal \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_13\ : STD_LOGIC;
   signal \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_15\ : STD_LOGIC;
   signal \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_16\ : STD_LOGIC;
   signal \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_17\ : STD_LOGIC;
   signal \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_18\ : STD_LOGIC;
-  signal \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_20\ : STD_LOGIC;
+  signal \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_19\ : STD_LOGIC;
   signal \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_21\ : STD_LOGIC;
   signal \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_22\ : STD_LOGIC;
   signal \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_23\ : STD_LOGIC;
@@ -6130,8 +6154,9 @@ architecture STRUCTURE of BME688_axi_quad_spi_1_0_qspi_core_interface is
   signal \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_25\ : STD_LOGIC;
   signal \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_26\ : STD_LOGIC;
   signal \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_27\ : STD_LOGIC;
-  signal \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_30\ : STD_LOGIC;
+  signal \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_28\ : STD_LOGIC;
   signal \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_32\ : STD_LOGIC;
+  signal \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_34\ : STD_LOGIC;
   signal \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_4\ : STD_LOGIC;
   signal \NO_FIFO_EXISTS.spiXfer_done_to_axi_clk\ : STD_LOGIC;
   signal \NO_FIFO_EXISTS.transmit_Data_frm_axi_clk\ : STD_LOGIC_VECTOR ( 0 to 7 );
@@ -6139,10 +6164,8 @@ architecture STRUCTURE of BME688_axi_quad_spi_1_0_qspi_core_interface is
   signal SOFT_RESET_I_n_0 : STD_LOGIC;
   signal SPICR_2_MST_N_SLV_to_spi_clk : STD_LOGIC;
   signal \^spissr_frm_axi_clk\ : STD_LOGIC;
-  signal Serial_Din : STD_LOGIC;
   signal Tx_FIFO_Empty_cdc_from_axi_d2 : STD_LOGIC;
   signal Tx_FIFO_Empty_cdc_from_axi_d3 : STD_LOGIC;
-  signal data_in : STD_LOGIC;
   signal intr_ip2bus_wrack : STD_LOGIC;
   signal ip2Bus_RdAck_core_reg : STD_LOGIC;
   signal ip2Bus_RdAck_core_reg0 : STD_LOGIC;
@@ -6153,6 +6176,7 @@ architecture STRUCTURE of BME688_axi_quad_spi_1_0_qspi_core_interface is
   signal \^p_1_in22_in\ : STD_LOGIC;
   signal \^p_1_in25_in\ : STD_LOGIC;
   signal \^p_1_in31_in\ : STD_LOGIC;
+  signal p_2_in : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \^prmry_in\ : STD_LOGIC;
   signal read_ack_delay_1 : STD_LOGIC;
   signal read_ack_delay_2 : STD_LOGIC;
@@ -6176,6 +6200,7 @@ architecture STRUCTURE of BME688_axi_quad_spi_1_0_qspi_core_interface is
   signal \^spicr_3_cpol_frm_axi_clk\ : STD_LOGIC;
   signal spicr_3_cpol_to_spi_clk : STD_LOGIC;
   signal \^spicr_4_cpha_frm_axi_clk\ : STD_LOGIC;
+  signal spicr_4_cpha_to_spi_clk : STD_LOGIC;
   signal \^spicr_7_ss_frm_axi_clk\ : STD_LOGIC;
   signal \^spicr_8_tr_inhibit_frm_axi_clk\ : STD_LOGIC;
   signal \^spicr_9_lsb_frm_axi_clk\ : STD_LOGIC;
@@ -6228,9 +6253,9 @@ INTERRUPT_CONTROL_I: entity work.BME688_axi_quad_spi_1_0_interrupt_control
      port map (
       \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]_0\ => \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]\,
       \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]_1\ => \GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5]\,
-      \GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg_reg[2]_0\ => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_11\,
-      \GEN_IP_IRPT_STATUS_REG[4].GEN_REG_STATUS.ip_irpt_status_reg_reg[4]_0\ => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_12\,
-      \GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5]_0\ => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_14\,
+      \GEN_IP_IRPT_STATUS_REG[2].GEN_REG_STATUS.ip_irpt_status_reg_reg[2]_0\ => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_12\,
+      \GEN_IP_IRPT_STATUS_REG[4].GEN_REG_STATUS.ip_irpt_status_reg_reg[4]_0\ => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_13\,
+      \GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5]_0\ => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_15\,
       IP2Bus_RdAck_1 => IP2Bus_RdAck_1,
       Q(6 downto 0) => Q(6 downto 0),
       bus2ip_wrce_int(0) => bus2ip_wrce_int(1),
@@ -6468,31 +6493,31 @@ INTERRUPT_CONTROL_I: entity work.BME688_axi_quad_spi_1_0_interrupt_control
     );
 \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I\: entity work.BME688_axi_quad_spi_1_0_qspi_mode_0_module
      port map (
-      D(0) => data_in,
+      D(0) => spi_cntrl_ns(1),
       D0 => D0,
       D_0 => D_0,
-      \FSM_sequential_LOCAL_TX_EMPTY_RX_FULL_FIFO_0_GEN.spi_cntrl_ps_reg[1]_0\(0) => spi_cntrl_ns(1),
       \LOGIC_GENERATION_FDR.drr_Overrun_int_cdc_from_spi_int_2_reg\ => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_4\,
-      \OTHER_RATIO_GENERATE.Serial_Dout_reg_0\ => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_32\,
-      \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]_0\(7) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_20\,
-      \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]_0\(6) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_21\,
-      \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]_0\(5) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_22\,
-      \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]_0\(4) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_23\,
-      \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]_0\(3) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_24\,
-      \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]_0\(2) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_25\,
-      \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]_0\(1) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_26\,
-      \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]_0\(0) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_27\,
-      \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]_0\(6) => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_25\,
-      \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]_0\(5) => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_26\,
-      \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]_0\(4) => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_27\,
-      \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]_0\(3) => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_28\,
-      \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]_0\(2) => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_29\,
-      \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]_0\(1) => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_30\,
-      \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]_0\(0) => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_31\,
-      \OTHER_RATIO_GENERATE.sck_o_int_reg_0\ => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_30\,
+      \OTHER_RATIO_GENERATE.Serial_Dout_reg_0\ => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_34\,
+      \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]_0\(7) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_21\,
+      \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]_0\(6) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_22\,
+      \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]_0\(5) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_23\,
+      \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]_0\(4) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_24\,
+      \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]_0\(3) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_25\,
+      \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]_0\(2) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_26\,
+      \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]_0\(1) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_27\,
+      \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]_0\(0) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_28\,
+      \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]_0\(6) => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_24\,
+      \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]_0\(5) => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_25\,
+      \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]_0\(4) => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_26\,
+      \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]_0\(3) => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_27\,
+      \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]_0\(2) => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_28\,
+      \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]_0\(1) => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_29\,
+      \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]_0\(0) => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_30\,
+      \OTHER_RATIO_GENERATE.rx_shft_reg_mode_0110_reg[7]_0\(0) => p_2_in(0),
+      \OTHER_RATIO_GENERATE.sck_o_int_reg_0\ => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_32\,
       Q(1 downto 0) => spi_cntrl_ps(1 downto 0),
       R => R,
-      \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_ABSENT_GEN.SPIXfer_done_int_reg_0\ => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_7\,
+      \RX_DATA_GEN_OTHER_SCK_RATIOS.FIFO_ABSENT_GEN.SPIXfer_done_int_reg_0\ => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_6\,
       \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[0]_0\(7) => receive_Data_int(0),
       \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[0]_0\(6) => receive_Data_int(1),
       \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[0]_0\(5) => receive_Data_int(2),
@@ -6503,9 +6528,8 @@ INTERRUPT_CONTROL_I: entity work.BME688_axi_quad_spi_1_0_interrupt_control
       \RX_DATA_GEN_OTHER_SCK_RATIOS.receive_Data_int_reg[0]_0\(0) => receive_Data_int(7),
       Rst_to_spi => rst_to_spi_int,
       SPICR_2_MST_N_SLV_to_spi_clk => SPICR_2_MST_N_SLV_to_spi_clk,
-      SPIXfer_done_int_d1_reg_0 => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_13\,
-      \SS_O_reg[0]_0\ => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_18\,
-      Serial_Din => Serial_Din,
+      SPIXfer_done_int_d1_reg_0 => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_12\,
+      \SS_O_reg[0]_0\ => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_19\,
       Tx_FIFO_Empty_cdc_from_axi_d2 => Tx_FIFO_Empty_cdc_from_axi_d2,
       Tx_FIFO_Empty_cdc_from_axi_d3 => Tx_FIFO_Empty_cdc_from_axi_d3,
       ext_spi_clk => ext_spi_clk,
@@ -6519,33 +6543,33 @@ INTERRUPT_CONTROL_I: entity work.BME688_axi_quad_spi_1_0_interrupt_control
       spiXfer_done_int => spiXfer_done_int,
       spicr_0_loop_to_spi_clk => spicr_0_loop_to_spi_clk,
       spicr_3_cpol_to_spi_clk => spicr_3_cpol_to_spi_clk,
+      spicr_4_cpha_to_spi_clk => spicr_4_cpha_to_spi_clk,
       spicr_9_lsb_to_spi_clk => spicr_9_lsb_to_spi_clk,
       ss_o(0) => ss_o(0),
       ss_t => ss_t,
       transfer_start_d1 => transfer_start_d1,
-      transfer_start_reg_0 => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_17\,
+      transfer_start_reg_0 => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_18\,
       tx_fifo_empty => tx_fifo_empty,
       xfer_done_fifo_0 => xfer_done_fifo_0
     );
 \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST\: entity work.BME688_axi_quad_spi_1_0_cross_clk_sync_fifo_0
      port map (
       Bus_RNW_reg => Bus_RNW_reg,
-      Bus_RNW_reg_reg => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_15\,
-      D(0) => data_in,
+      Bus_RNW_reg_reg => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_16\,
+      D(0) => spi_cntrl_ns(1),
       D0 => D0,
       D09_out => D09_out,
       D_0 => D_1,
       D_1 => D_0,
       \GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5]\ => \GEN_IP_IRPT_STATUS_REG[5].GEN_REG_STATUS.ip_irpt_status_reg_reg[5]\,
-      \LOGIC_GENERATION_FDR.DRR_OVERRUN_SYNC_SPI_cdc_to_AXI_3_0\ => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_14\,
-      \LOGIC_GENERATION_FDR.SPICR_2_MST_N_SLV_AX2S_2_0\ => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_17\,
-      \LOGIC_GENERATION_FDR.SPICR_3_CPOL_AX2S_2_0\ => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_30\,
-      \LOGIC_GENERATION_FDR.SPICR_7_SS_AX2S_2_0\ => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_18\,
-      \LOGIC_GENERATION_FDR.SYNC_SPIXFER_DONE_SYNC_SPI_2_AXI_3_0\ => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_11\,
-      \LOGIC_GENERATION_FDR.SYNC_SPIXFER_DONE_SYNC_SPI_2_AXI_3_1\ => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_12\,
-      \LOGIC_GENERATION_FDR.SYNC_SPIXFER_DONE_SYNC_SPI_2_AXI_3_2\ => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_16\,
-      \LOGIC_GENERATION_FDR.TR_DATA_SYNC_AX2SP_GEN[7].TR_DATA_SYNC_AX2SP_2_0\ => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_32\,
-      \LOGIC_GENERATION_FDR.TX_FIFO_EMPTY_SYNC_AXI_2_SPI_3_0\(0) => spi_cntrl_ns(1),
+      \LOGIC_GENERATION_FDR.DRR_OVERRUN_SYNC_SPI_cdc_to_AXI_3_0\ => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_15\,
+      \LOGIC_GENERATION_FDR.SPICR_2_MST_N_SLV_AX2S_2_0\ => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_18\,
+      \LOGIC_GENERATION_FDR.SPICR_3_CPOL_AX2S_2_0\ => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_32\,
+      \LOGIC_GENERATION_FDR.SPICR_7_SS_AX2S_2_0\ => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_19\,
+      \LOGIC_GENERATION_FDR.SYNC_SPIXFER_DONE_SYNC_SPI_2_AXI_3_0\ => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_12\,
+      \LOGIC_GENERATION_FDR.SYNC_SPIXFER_DONE_SYNC_SPI_2_AXI_3_1\ => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_13\,
+      \LOGIC_GENERATION_FDR.SYNC_SPIXFER_DONE_SYNC_SPI_2_AXI_3_2\ => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_17\,
+      \LOGIC_GENERATION_FDR.TR_DATA_SYNC_AX2SP_GEN[7].TR_DATA_SYNC_AX2SP_2_0\ => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_34\,
       \LOGIC_GENERATION_FDR.Tx_FIFO_Empty_SPISR_cdc_from_spi_d1_reg_0\ => \^sr_5_tx_empty_int\,
       \LOGIC_GENERATION_FDR.drr_Overrun_int_cdc_from_spi_int_2_reg_0\ => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_4\,
       \LOGIC_GENERATION_FDR.receive_Data_cdc_from_spi_d1_reg[0]_0\(7) => receive_Data_int(0),
@@ -6566,28 +6590,28 @@ INTERRUPT_CONTROL_I: entity work.BME688_axi_quad_spi_1_0_interrupt_control
       \LOGIC_GENERATION_FDR.receive_Data_cdc_from_spi_d2_reg[0]_0\(0) => receive_Data_cdc_from_spi_d2(7),
       \NO_FIFO_EXISTS.spiXfer_done_to_axi_clk\ => \NO_FIFO_EXISTS.spiXfer_done_to_axi_clk\,
       \NO_FIFO_EXISTS.transmit_Data_frm_axi_clk\(0 to 7) => \NO_FIFO_EXISTS.transmit_Data_frm_axi_clk\(0 to 7),
-      \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]\(6) => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_25\,
-      \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]\(5) => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_26\,
-      \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]\(4) => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_27\,
-      \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]\(3) => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_28\,
-      \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]\(2) => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_29\,
-      \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]\(1) => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_30\,
-      \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]\(0) => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_31\,
-      \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]\(7) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_20\,
-      \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]\(6) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_21\,
-      \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]\(5) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_22\,
-      \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]\(4) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_23\,
-      \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]\(3) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_24\,
-      \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]\(2) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_25\,
-      \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]\(1) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_26\,
-      \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]\(0) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_27\,
-      \OTHER_RATIO_GENERATE.Shift_Reg_reg[7]\ => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_13\,
+      \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]\(6) => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_24\,
+      \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]\(5) => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_25\,
+      \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]\(4) => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_26\,
+      \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]\(3) => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_27\,
+      \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]\(2) => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_28\,
+      \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]\(1) => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_29\,
+      \OTHER_RATIO_GENERATE.Shift_Reg_reg[0]\(0) => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_30\,
+      \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]\(7) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_21\,
+      \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]\(6) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_22\,
+      \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]\(5) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_23\,
+      \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]\(4) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_24\,
+      \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]\(3) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_25\,
+      \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]\(2) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_26\,
+      \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]\(1) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_27\,
+      \OTHER_RATIO_GENERATE.Shift_Reg_reg[1]\(0) => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_28\,
+      \OTHER_RATIO_GENERATE.Shift_Reg_reg[7]\ => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_12\,
+      \OTHER_RATIO_GENERATE.serial_dout_int_reg\(0) => p_2_in(0),
       Q(1 downto 0) => spi_cntrl_ps(1 downto 0),
       R => R,
       Rst_to_spi => rst_to_spi_int,
       SPICR_2_MST_N_SLV_to_spi_clk => SPICR_2_MST_N_SLV_to_spi_clk,
       SPISSR_frm_axi_clk => \^spissr_frm_axi_clk\,
-      Serial_Din => Serial_Din,
       \TRANSMIT_REG_GENERATE[7].Transmit_Reg_Data_Out_reg[7]\ => SOFT_RESET_I_n_0,
       Tx_FIFO_Empty_SPISR_to_axi_clk => Tx_FIFO_Empty_SPISR_to_axi_clk,
       Tx_FIFO_Empty_cdc_from_axi_d2 => Tx_FIFO_Empty_cdc_from_axi_d2,
@@ -6616,6 +6640,7 @@ INTERRUPT_CONTROL_I: entity work.BME688_axi_quad_spi_1_0_interrupt_control
       spicr_3_cpol_frm_axi_clk => \^spicr_3_cpol_frm_axi_clk\,
       spicr_3_cpol_to_spi_clk => spicr_3_cpol_to_spi_clk,
       spicr_4_cpha_frm_axi_clk => \^spicr_4_cpha_frm_axi_clk\,
+      spicr_4_cpha_to_spi_clk => spicr_4_cpha_to_spi_clk,
       spicr_7_ss_frm_axi_clk => \^spicr_7_ss_frm_axi_clk\,
       spicr_8_tr_inhibit_frm_axi_clk => \^spicr_8_tr_inhibit_frm_axi_clk\,
       spicr_9_lsb_frm_axi_clk => \^spicr_9_lsb_frm_axi_clk\,
@@ -6624,7 +6649,7 @@ INTERRUPT_CONTROL_I: entity work.BME688_axi_quad_spi_1_0_interrupt_control
       spisel_d1_reg_to_axi_clk => spisel_d1_reg_to_axi_clk,
       sr_5_Tx_Empty_i_reg => \^ip2bus_wrack_core_reg_1\,
       transfer_start_d1 => transfer_start_d1,
-      transfer_start_reg => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_7\,
+      transfer_start_reg => \LOGIC_FOR_MD_0_GEN.SPI_MODULE_I_n_6\,
       tx_Reg_Soft_Reset_op => tx_Reg_Soft_Reset_op,
       tx_fifo_empty => tx_fifo_empty,
       xfer_done_fifo_0 => xfer_done_fifo_0
@@ -6660,9 +6685,9 @@ INTERRUPT_CONTROL_I: entity work.BME688_axi_quad_spi_1_0_interrupt_control
       reset2ip_reset_int => reset2ip_reset_int,
       s_axi_aclk => s_axi_aclk,
       s_axi_wdata(7 downto 0) => s_axi_wdata(7 downto 0),
-      sr_5_Tx_Empty_i_reg_0 => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_16\,
+      sr_5_Tx_Empty_i_reg_0 => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_17\,
       sr_5_Tx_Empty_int => \^sr_5_tx_empty_int\,
-      sr_7_Rx_Empty_reg_reg_0 => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_15\,
+      sr_7_Rx_Empty_reg_reg_0 => \NO_FIFO_EXISTS.CROSS_CLK_FIFO_0_INST_n_16\,
       tx_Reg_Soft_Reset_op => tx_Reg_Soft_Reset_op
     );
 RESET_SYNC_AXI_SPI_CLK_INST: entity work.BME688_axi_quad_spi_1_0_reset_sync_module
@@ -8373,7 +8398,7 @@ entity BME688_axi_quad_spi_1_0_axi_quad_spi is
   attribute C_NUM_TRANSFER_BITS : integer;
   attribute C_NUM_TRANSFER_BITS of BME688_axi_quad_spi_1_0_axi_quad_spi : entity is 8;
   attribute C_SCK_RATIO : integer;
-  attribute C_SCK_RATIO of BME688_axi_quad_spi_1_0_axi_quad_spi : entity is 4;
+  attribute C_SCK_RATIO of BME688_axi_quad_spi_1_0_axi_quad_spi : entity is 8;
   attribute C_SELECT_XPM : integer;
   attribute C_SELECT_XPM of BME688_axi_quad_spi_1_0_axi_quad_spi : entity is 0;
   attribute C_SHARED_STARTUP : integer;
@@ -8612,7 +8637,7 @@ entity BME688_axi_quad_spi_1_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of BME688_axi_quad_spi_1_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of BME688_axi_quad_spi_1_0 : entity is "axi_quad_spi,Vivado 2023.2.1";
+  attribute x_core_info of BME688_axi_quad_spi_1_0 : entity is "axi_quad_spi,Vivado 2023.2.2";
 end BME688_axi_quad_spi_1_0;
 
 architecture STRUCTURE of BME688_axi_quad_spi_1_0 is
@@ -8673,7 +8698,7 @@ architecture STRUCTURE of BME688_axi_quad_spi_1_0 is
   attribute C_NUM_TRANSFER_BITS : integer;
   attribute C_NUM_TRANSFER_BITS of U0 : label is 8;
   attribute C_SCK_RATIO : integer;
-  attribute C_SCK_RATIO of U0 : label is 4;
+  attribute C_SCK_RATIO of U0 : label is 8;
   attribute C_SELECT_XPM : integer;
   attribute C_SELECT_XPM of U0 : label is 0;
   attribute C_SHARED_STARTUP : integer;

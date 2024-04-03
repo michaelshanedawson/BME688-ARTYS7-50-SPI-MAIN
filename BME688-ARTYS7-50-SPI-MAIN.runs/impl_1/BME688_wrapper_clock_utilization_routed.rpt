@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2.2 (win64) Build 4126759 Thu Feb  8 23:53:51 MST 2024
-| Date         : Fri Mar 15 08:43:55 2024
+| Date         : Wed Apr  3 15:45:18 2024
 | Host         : DarkStar running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file BME688_wrapper_clock_utilization_routed.rpt
 | Design       : BME688_wrapper
@@ -57,12 +57,12 @@ Table of Contents
 +-----------+-----------+-----------------+------------+---------------+--------------+-------------------+-------------+-----------------+--------------+----------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
 | Global Id | Source Id | Driver Type/Pin | Constraint | Site          | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock                                                    | Driver Pin                                                                                                           | Net                                                                                        |
 +-----------+-----------+-----------------+------------+---------------+--------------+-------------------+-------------+-----------------+--------------+----------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
-| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y0 | n/a          |                 6 |       10119 |               0 |       10.000 | clk_out1_BME688_clk_wiz_0_0                              | BME688_i/clk_wiz_0/inst/clkout1_buf/O                                                                                | BME688_i/clk_wiz_0/inst/clk_out1                                                           |
-| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y1 | n/a          |                 4 |        5062 |               0 |       12.308 | clk_pll_i                                                | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O                           | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0_0 |
+| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y0 | n/a          |                 5 |       10119 |               0 |       10.000 | clk_out1_BME688_clk_wiz_0_0                              | BME688_i/clk_wiz_0/inst/clkout1_buf/O                                                                                | BME688_i/clk_wiz_0/inst/clk_out1                                                           |
+| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y1 | n/a          |                 3 |        5062 |               0 |       12.308 | clk_pll_i_1                                              | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O                           | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0_0 |
 | g2        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y2 | n/a          |                 2 |         235 |               0 |       20.000 | clk_out2_BME688_clk_wiz_0_0                              | BME688_i/clk_wiz_0/inst/clkout2_buf/O                                                                                | BME688_i/clk_wiz_0/inst/clk_out2                                                           |
 | g3        | src3      | BUFG/O          | None       | BUFGCTRL_X0Y4 | n/a          |                 2 |         234 |               0 |       33.333 | BME688_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK   | BME688_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/Using_FPGA.Native/O                                                    | BME688_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/Dbg_Clk_0                                    |
-| g4        | src4      | BUFG/O          | None       | BUFGCTRL_X0Y5 | n/a          |                 2 |          39 |               1 |       33.333 | BME688_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE | BME688_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFG_inst/O                                                            | BME688_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFG                                         |
-| g5        | src5      | BUFG/O          | None       | BUFGCTRL_X0Y3 | n/a          |                 2 |          16 |               0 |        5.000 | mmcm_clkout0                                             | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.u_bufg_ui_addn_clk_0/O | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/ui_addn_clk_0    |
+| g4        | src4      | BUFG/O          | None       | BUFGCTRL_X0Y5 | n/a          |                 1 |          39 |               1 |       33.333 | BME688_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE | BME688_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFG_inst/O                                                            | BME688_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFG                                         |
+| g5        | src5      | BUFG/O          | None       | BUFGCTRL_X0Y3 | n/a          |                 2 |          16 |               0 |        5.000 | mmcm_clkout0_1                                           | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.u_bufg_ui_addn_clk_0/O | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/ui_addn_clk_0    |
 | g6        | src6      | BUFG/O          | None       | BUFGCTRL_X0Y6 | n/a          |                 1 |           1 |               0 |       12.308 | clkfbout_BME688_clk_wiz_0_0                              | BME688_i/clk_wiz_0/inst/clkf_buf/O                                                                                   | BME688_i/clk_wiz_0/inst/clkfbout_buf_BME688_clk_wiz_0_0                                    |
 | g7        | src7      | BUFH/O          | None       | BUFHCE_X1Y0   | X1Y0         |                 1 |           1 |               0 |       12.308 | pll_clk3_out_1                                           | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O                          | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3         |
 +-----------+-----------+-----------------+------------+---------------+--------------+-------------------+-------------+-----------------+--------------+----------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
@@ -113,12 +113,12 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
-| X0Y0              |    6 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    4 |    50 |    0 |    50 | 2506 |  1200 |  797 |   400 |    0 |    20 |    9 |    10 |    0 |    20 |
-| X1Y0              |    4 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    4 |    50 | 4207 |  1500 | 1119 |   450 |    0 |    40 |   17 |    20 |    0 |    20 |
-| X0Y1              |    5 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    2 |    50 |    1 |    50 | 3324 |  1200 | 1306 |   400 |    0 |    20 |    4 |    10 |    0 |    20 |
-| X1Y1              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 4545 |  1500 | 1437 |   450 |    0 |    40 |    4 |    20 |    0 |    20 |
-| X0Y2              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   97 |  1800 |   25 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y2              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     1 |    0 |     0 |    0 |     0 |   51 |   950 |   23 |   300 |    0 |    10 |    0 |     5 |    0 |    20 |
+| X0Y0              |    5 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    4 |    50 |    0 |    50 | 3026 |  1200 | 1111 |   400 |    0 |    20 |   10 |    10 |    0 |    20 |
+| X1Y0              |    4 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    4 |    50 | 4131 |  1500 | 1033 |   450 |    0 |    40 |   13 |    20 |    0 |    20 |
+| X0Y1              |    4 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    2 |    50 |    1 |    50 | 3231 |  1200 | 1167 |   400 |    0 |    20 |    4 |    10 |    0 |    20 |
+| X1Y1              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 4326 |  1500 | 1386 |   450 |    0 |    40 |    7 |    20 |    0 |    20 |
+| X0Y2              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    1 |  1800 |    0 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y2              |    1 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     4 |    0 |     1 |    0 |     0 |    0 |     0 |   15 |   950 |    7 |   300 |    0 |    10 |    0 |     5 |    0 |    20 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 * Global Clock column represents track count; while other columns represents cell counts
 
@@ -153,9 +153,9 @@ All Modules
 +----+-------+-------+-----------------------+
 |    | X0    | X1    | HORIZONTAL PROG DELAY |
 +----+-------+-------+-----------------------+
-| Y2 |    97 |    36 |                     0 |
-| Y1 |  3102 |  4351 |                     0 |
-| Y0 |  1540 |   810 |                     0 |
+| Y2 |     1 |     0 |                     0 |
+| Y1 |  2899 |  4225 |                     0 |
+| Y0 |  2154 |   657 |                     0 |
 +----+-------+-------+-----------------------+
 
 
@@ -177,8 +177,8 @@ All Modules
 |    | X0   | X1    | HORIZONTAL PROG DELAY |
 +----+------+-------+-----------------------+
 | Y2 |    0 |     0 |                     - |
-| Y1 |   28 |   362 |                     0 |
-| Y0 |  964 |  3569 |                     0 |
+| Y1 |    0 |   277 |                     0 |
+| Y0 |  983 |  3663 |                     0 |
 +----+------+-------+-----------------------+
 
 
@@ -223,8 +223,8 @@ All Modules
 |    | X0   | X1 | HORIZONTAL PROG DELAY |
 +----+------+----+-----------------------+
 | Y2 |    0 |  0 |                     - |
-| Y1 |   92 |  0 |                     0 |
-| Y0 |  142 |  0 |                     0 |
+| Y1 |  185 |  0 |                     0 |
+| Y0 |   49 |  0 |                     0 |
 +----+------+----+-----------------------+
 
 
@@ -246,8 +246,8 @@ All Modules
 |    | X0  | X1 | HORIZONTAL PROG DELAY |
 +----+-----+----+-----------------------+
 | Y2 |   0 |  0 |                     - |
-| Y1 |  29 |  0 |                     0 |
-| Y0 |  11 |  0 |                     0 |
+| Y1 |  40 |  0 |                     0 |
+| Y0 |   0 |  0 |                     - |
 +----+-----+----+-----------------------+
 
 
@@ -326,11 +326,10 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                        |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        1540 |               0 | 1433 |          98 |    9 |   0 |  0 |    0 |   0 |       0 | BME688_i/clk_wiz_0/inst/clk_out1                                                           |
-| g1        | n/a   | BUFG/O          | None       |         964 |               0 |  933 |          30 |    0 |   0 |  0 |    1 |   0 |       0 | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0_0 |
+| g0        | n/a   | BUFG/O          | None       |        2154 |               0 | 1999 |         145 |   10 |   0 |  0 |    0 |   0 |       0 | BME688_i/clk_wiz_0/inst/clk_out1                                                           |
+| g1        | n/a   | BUFG/O          | None       |         983 |               0 |  976 |           6 |    0 |   0 |  0 |    1 |   0 |       0 | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0_0 |
 | g2        | n/a   | BUFG/O          | None       |           4 |               0 |    4 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | BME688_i/clk_wiz_0/inst/clk_out2                                                           |
-| g3        | n/a   | BUFG/O          | None       |         142 |               0 |  125 |          17 |    0 |   0 |  0 |    0 |   0 |       0 | BME688_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/Dbg_Clk_0                                    |
-| g4        | n/a   | BUFG/O          | None       |          11 |               0 |   11 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | BME688_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFG                                         |
+| g3        | n/a   | BUFG/O          | None       |          49 |               0 |   47 |           2 |    0 |   0 |  0 |    0 |   0 |       0 | BME688_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/Dbg_Clk_0                                    |
 | g6        | n/a   | BUFG/O          | None       |           1 |               0 |    0 |           0 |    0 |   0 |  0 |    1 |   0 |       0 | BME688_i/clk_wiz_0/inst/clkfbout_buf_BME688_clk_wiz_0_0                                    |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
@@ -344,8 +343,8 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                        |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |         810 |               0 |  789 |           4 |   17 |   0 |  0 |    0 |   0 |       0 | BME688_i/clk_wiz_0/inst/clk_out1                                                           |
-| g1        | n/a   | BUFG/O          | None       |        3569 |               0 | 3418 |         121 |    0 |   0 |  0 |    1 |   0 |       0 | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0_0 |
+| g0        | n/a   | BUFG/O          | None       |         657 |               0 |  643 |           1 |   13 |   0 |  0 |    0 |   0 |       0 | BME688_i/clk_wiz_0/inst/clk_out1                                                           |
+| g1        | n/a   | BUFG/O          | None       |        3663 |               0 | 3488 |         145 |    0 |   0 |  0 |    1 |   0 |       0 | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0_0 |
 | g5        | n/a   | BUFG/O          | None       |           1 |               0 |    0 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/ui_addn_clk_0    |
 | g7        | n/a   | BUFH/O          | None       |           1 |               0 |    0 |           0 |    0 |   0 |  0 |    1 |   0 |       0 | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3         |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------+
@@ -357,15 +356,14 @@ All Modules
 17. Clock Region Cell Placement per Global Clock: Region X0Y1
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                        |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        3102 |               0 | 2955 |         143 |    4 |   0 |  0 |    0 |   0 |       0 | BME688_i/clk_wiz_0/inst/clk_out1                                                           |
-| g1        | n/a   | BUFG/O          | None       |          28 |               0 |   28 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0_0 |
-| g2        | n/a   | BUFG/O          | None       |         228 |               0 |  228 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | BME688_i/clk_wiz_0/inst/clk_out2                                                           |
-| g3        | n/a   | BUFG/O          | None       |          92 |               0 |   85 |           7 |    0 |   0 |  0 |    0 |   0 |       0 | BME688_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/Dbg_Clk_0                                    |
-| g4        | n/a   | BUFG/O          | None       |          28 |               1 |   28 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | BME688_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFG                                         |
-+-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+---------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                     |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+---------------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |        2899 |               0 | 2801 |          94 |    4 |   0 |  0 |    0 |   0 |       0 | BME688_i/clk_wiz_0/inst/clk_out1                        |
+| g2        | n/a   | BUFG/O          | None       |         228 |               0 |  228 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | BME688_i/clk_wiz_0/inst/clk_out2                        |
+| g3        | n/a   | BUFG/O          | None       |         185 |               0 |  163 |          22 |    0 |   0 |  0 |    0 |   0 |       0 | BME688_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/Dbg_Clk_0 |
+| g4        | n/a   | BUFG/O          | None       |          39 |               1 |   39 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | BME688_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFG      |
++-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+---------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -377,8 +375,8 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF   | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                        |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |        4351 |               0 | 4183 |         164 |    4 |   0 |  0 |    0 |   0 |       0 | BME688_i/clk_wiz_0/inst/clk_out1                                                           |
-| g1        | n/a   | BUFG/O          | None       |         362 |               0 |  362 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0_0 |
+| g0        | n/a   | BUFG/O          | None       |        4225 |               0 | 4049 |         169 |    7 |   0 |  0 |    0 |   0 |       0 | BME688_i/clk_wiz_0/inst/clk_out1                                                           |
+| g1        | n/a   | BUFG/O          | None       |         277 |               0 |  277 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0_0 |
 +-----------+-------+-----------------+------------+-------------+-----------------+------+-------------+------+-----+----+------+-----+---------+--------------------------------------------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
@@ -391,7 +389,7 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+----+-------------+------+-----+----+------+-----+---------+----------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                              |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+-------------+------+-----+----+------+-----+---------+----------------------------------+
-| g0        | n/a   | BUFG/O          | None       |          97 |               0 | 97 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | BME688_i/clk_wiz_0/inst/clk_out1 |
+| g0        | n/a   | BUFG/O          | None       |           1 |               0 |  1 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | BME688_i/clk_wiz_0/inst/clk_out1 |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+-------------+------+-----+----+------+-----+---------+----------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
 ** Non-Clock Loads column represents cell count of non-clock pin loads
@@ -404,7 +402,6 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+----+-------------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | Memory LUTs | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                     |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+-------------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |          36 |               0 | 36 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | BME688_i/clk_wiz_0/inst/clk_out1                                                        |
 | g5        | n/a   | BUFG/O          | None       |          15 |               0 | 15 |           0 |    0 |   0 |  0 |    0 |   0 |       0 | BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/ui_addn_clk_0 |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+-------------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------------------+
 * Clock Loads column represents cell count of net connects that connect to a clock pin. Internal cell leaf pins are not considered
@@ -441,14 +438,14 @@ resize_pblock [get_pblocks {CLKAG_BME688_i/mig_7series_0/u_BME688_mig_7series_0_
 #startgroup
 create_pblock {CLKAG_BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0_0}
 add_cells_to_pblock [get_pblocks  {CLKAG_BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0_0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL && NAME!=BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i && NAME!=BME688_i/clk_wiz_0/inst/mmcm_adv_inst} -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0_0"}]]]
-resize_pblock [get_pblocks {CLKAG_BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0_0}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+resize_pblock [get_pblocks {CLKAG_BME688_i/mig_7series_0/u_BME688_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0_0}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
 #endgroup
 
 # Clock net "BME688_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFG" driven by instance "BME688_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFG_inst" located at site "BUFGCTRL_X0Y5"
 #startgroup
 create_pblock {CLKAG_BME688_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFG}
 add_cells_to_pblock [get_pblocks  {CLKAG_BME688_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFG}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="BME688_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFG"}]]]
-resize_pblock [get_pblocks {CLKAG_BME688_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFG}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
+resize_pblock [get_pblocks {CLKAG_BME688_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFG}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1}
 #endgroup
 
 # Clock net "BME688_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/Dbg_Clk_0" driven by instance "BME688_i/mdm_1/U0/No_Dbg_Reg_Access.BUFG_DRCK/Using_FPGA.Native" located at site "BUFGCTRL_X0Y4"
@@ -469,5 +466,5 @@ resize_pblock [get_pblocks {CLKAG_BME688_i/clk_wiz_0/inst/clk_out2}] -add {CLOCK
 #startgroup
 create_pblock {CLKAG_BME688_i/clk_wiz_0/inst/clk_out1}
 add_cells_to_pblock [get_pblocks  {CLKAG_BME688_i/clk_wiz_0/inst/clk_out1}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="BME688_i/clk_wiz_0/inst/clk_out1"}]]]
-resize_pblock [get_pblocks {CLKAG_BME688_i/clk_wiz_0/inst/clk_out1}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
+resize_pblock [get_pblocks {CLKAG_BME688_i/clk_wiz_0/inst/clk_out1}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
 #endgroup

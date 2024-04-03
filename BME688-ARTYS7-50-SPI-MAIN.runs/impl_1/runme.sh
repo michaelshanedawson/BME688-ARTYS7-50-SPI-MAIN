@@ -42,7 +42,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
+/bin/touch .write_bitstream.begin.rst
 EAStep vivado -log BME688_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source BME688_wrapper.tcl -notrace
 
 

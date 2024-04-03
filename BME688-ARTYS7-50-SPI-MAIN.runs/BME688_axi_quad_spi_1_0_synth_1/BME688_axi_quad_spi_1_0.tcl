@@ -92,7 +92,7 @@ set_property ip_output_repo c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.srcs/sources_1/bd/BME688/ip/BME688_axi_quad_spi_1_0/BME688_axi_quad_spi_1_0.xci
+read_ip -quiet C:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.srcs/sources_1/bd/BME688/ip/BME688_axi_quad_spi_1_0/BME688_axi_quad_spi_1_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/ip/BME688_axi_quad_spi_1_0/BME688_axi_quad_spi_1_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/ip/BME688_axi_quad_spi_1_0/BME688_axi_quad_spi_1_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/cloud/OneDrive/_Arty_Spartan_7/Projects/BME688-ARTYS7-50-SPI-MAIN/BME688-ARTYS7-50-SPI-MAIN.gen/sources_1/bd/BME688/ip/BME688_axi_quad_spi_1_0/BME688_axi_quad_spi_1_0_ooc.xdc]
